@@ -1,83 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Sportnduck</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Sportnduck</title>
 
-  <style>
-    :root{
-      --brand:#7A6A4F;
-      --ink:#2c2a26;
-      --muted:#5b554c;
-      --cream:#fbf7f0;
-      --line:rgba(122,106,79,.22);
-      --shadow:0 18px 45px rgba(44,42,38,.10);
-      --radius:20px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-serif, Georgia, "Times New Roman", serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 700px at 20% 0%, rgba(122,106,79,.18), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(122,106,79,.12), transparent 55%),
-        var(--cream);
-    }
-    .wrap{max-width:1100px;margin:0 auto;padding:22px}
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(251,247,240,.78);
-      border-bottom:1px solid var(--line);
-      backdrop-filter: blur(10px);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-    .brand{text-decoration:none;display:flex;flex-direction:column;gap:2px;line-height:1.05;}
-    .brand small{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      letter-spacing:.12em;text-transform:uppercase;color:var(--brand);
-      font-weight:700;font-size:.78rem;
-    }
-    .brand strong{font-size:1.25rem;font-weight:700;}
-    .menu{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-size:.95rem;
-    }
-    .menu a{
-      text-decoration:none;padding:10px 12px;border-radius:999px;
-      border:1px solid transparent;color:var(--muted);
-    }
-    .menu a:hover{border-color:var(--line);background:rgba(255,255,255,.75);color:var(--ink)}
-    .menu a.cta{background:var(--brand);color:#fff;border-color:transparent;}
-    .menu a.cta:hover{filter:brightness(.96)}
+<style>
+body{
+  margin:0;
+  font-family: Georgia, serif;
+  background:#fbf7f0;
+  color:#2c2a26;
+  text-align:center;
+}
 
-    .card{
-      background:rgba(255,255,255,.82);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(6px);
-      padding:28px;
-    }
-    h1{margin:0 0 10px;font-size:2.2rem;line-height:1.1}
-    p{
-      margin:0;
-      color:var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      line-height:1.7;
-      font-size:1.02rem;
-      max-width:70ch;
-    }
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 16px;border-radius:999px;
-      text-decoration:none;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.85);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-weight:650;
-      color:var(--ink);
+.container{
+  max-width:800px;
+  margin:80px auto;
+  background:white;
+  padding:50px 30px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+h1{
+  color:#7A6A4F;
+  font-size:36px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.button{
+  display:inline-block;
+  margin:12px;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  background:#7A6A4F;
+  font-size:16px;
+}
+
+.button.secondary{
+  background:#2c2a26;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact Sportnduck</h1>
+
+<p>
+All services are personalized and require an appointment.<br>
+Begin your concierge-style experience by contacting us below.
+</p>
+
+<br>
+
+<a class="button" href="mailto:hello@sportnduck.com">Email Us</a>
+
+<a class="button secondary" href="sms:+19082161661">Text to Book</a>
+
+<br><br>
+
+<a href="index.html">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
