@@ -129,6 +129,169 @@
   box-shadow:var(--shadow);
   padding:34px;
 }
+    /* =========================
+   BOUTIQUE UPGRADE LAYER
+   Paste ABOVE </style>
+   ========================= */
+
+:root{
+  --max: 1040px;
+  --radius-lg: 26px;
+  --shadow-soft: 0 14px 45px rgba(44,42,38,.10);
+}
+
+/* global polish */
+body{
+  line-height: 1.65;
+  letter-spacing: .01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px 20px 70px;
+}
+
+/* top nav = luxe + clean */
+.topbar{
+  background: rgba(251,247,240,.86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(122,106,79,.20);
+}
+
+.topbar .row{
+  padding: 12px 2px;
+}
+
+.brand{
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.menu a{
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.menu a:hover{
+  background: rgba(122,106,79,.10);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* hero card = boutique “invitation” */
+.hero{
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(122,106,79,.18);
+  background: rgba(255,255,255,.55);
+}
+
+.hero h1{
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.note{
+  opacity: .9;
+}
+
+/* links = elegant */
+a{
+  color: var(--ink);
+  text-decoration-color: rgba(122,106,79,.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover{
+  text-decoration-color: rgba(122,106,79,.85);
+}
+
+/* buttons = boutique pill style */
+.btns{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn,
+a.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(122,106,79,.28);
+  background: rgba(255,255,255,.55);
+  text-decoration:none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.btn:hover,
+a.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(44,42,38,.12);
+  background: rgba(255,255,255,.72);
+}
+
+.btn.primary{
+  background: rgba(122,106,79,.92);
+  color: #fff;
+  border-color: rgba(122,106,79,.70);
+}
+
+.btn.primary:hover{
+  background: rgba(122,106,79,1);
+}
+
+/* section headings = airy + premium */
+h2{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+hr{
+  border: 0;
+  border-top: 1px solid rgba(122,106,79,.16);
+  margin: 26px 0;
+}
+
+/* card grid (if you have feature cards) */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.card{
+  grid-column: span 6;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(122,106,79,.16);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(44,42,38,.08);
+}
+
+.card h3{
+  margin: 0 0 6px;
+}
+
+@media (max-width: 900px){
+  .card{ grid-column: span 12; }
+  .hero{ padding: 24px; }
+}
+
+@media (max-width: 520px){
+  .wrap{ padding: 14px 14px 56px; }
+  .menu a{ padding: 8px 8px; }
+  .hero h1{ font-size: 2.05rem; 
   </style>
 </head>
 
