@@ -203,6 +203,113 @@
       .topbar .row{ padding: 12px 14px; }
       .wrap{ padding: 18px 14px 40px; }
     }
+    /* === LUXURY UPGRADE (paste at END of your CSS) === */
+
+/* slightly richer palette + softer contrast */
+:root{
+  --cream:#fbf6ee;
+  --paper: rgba(255,255,255,.78);
+  --line: rgba(44,42,38,.12);
+  --shadow: 0 22px 60px rgba(44,42,38,.12);
+}
+
+/* luxe background texture + calmer type */
+body{
+  background:
+    radial-gradient(1200px 760px at 18% 18%, rgba(122,106,79,.14), transparent 60%),
+    radial-gradient(900px 520px at 92% 12%, rgba(122,106,79,.10), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)),
+    var(--cream);
+}
+
+/* tighter, premium header */
+.topbar{
+  background: rgba(251,246,238,.78);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(44,42,38,.10);
+}
+.brand{
+  letter-spacing: .3px;
+}
+
+/* menu links look like refined tabs */
+nav.menu a{
+  font-size: .95rem;
+  padding: 9px 12px;
+  border: 1px solid rgba(44,42,38,.10);
+  background: rgba(255,255,255,.35);
+}
+nav.menu a:hover{
+  background: rgba(255,255,255,.65);
+  border-color: rgba(44,42,38,.16);
+}
+
+/* hero becomes a “glass card” */
+.hero{
+  background: var(--paper);
+  border: 1px solid rgba(44,42,38,.10);
+  box-shadow: var(--shadow);
+}
+.kicker{
+  font-size: .76rem;
+  letter-spacing: .18em;
+}
+h1{
+  letter-spacing: -0.03em;
+}
+
+/* luxe buttons */
+.pillbar a{
+  padding: 11px 14px;
+  border: 1px solid rgba(44,42,38,.12);
+  background: rgba(255,255,255,.55);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.pillbar a:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.78);
+  border-color: rgba(44,42,38,.18);
+}
+.pillbar a.primary{
+  background: linear-gradient(135deg, #7A6A4F, #6b5c45);
+  box-shadow: 0 12px 30px rgba(122,106,79,.28);
+}
+
+/* cards feel elevated + refined */
+.card{
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(44,42,38,.10);
+  box-shadow: 0 14px 40px rgba(44,42,38,.10);
+}
+.card h3{
+  letter-spacing: -0.02em;
+}
+.card p{
+  line-height: 1.7;
+}
+
+/* section dividers more elegant */
+.divider{
+  background: linear-gradient(90deg, transparent, rgba(44,42,38,.14), transparent);
+}
+
+/* a touch of “boutique print” feel */
+main.wrap{
+  position: relative;
+}
+main.wrap:before{
+  content:"";
+  position:absolute;
+  inset:-20px -10px auto -10px;
+  height: 220px;
+  pointer-events:none;
+  background:
+    radial-gradient(2px 2px at 20px 30px, rgba(44,42,38,.05), transparent 60%),
+    radial-gradient(2px 2px at 160px 80px, rgba(44,42,38,.04), transparent 60%),
+    radial-gradient(2px 2px at 320px 40px, rgba(44,42,38,.04), transparent 60%),
+    radial-gradient(2px 2px at 520px 120px, rgba(44,42,38,.03), transparent 60%);
+  opacity: .9;
+}
   </style>
 </head>
 
