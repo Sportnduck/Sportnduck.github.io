@@ -1,10 +1,10 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sportnduck Lifestyle Boutique</title>
-  <meta name="description" content="Curated style, intentional wellness, and smart beauty education." />
+  <meta name="description" content="Curated style, intentional wellness, and smart beauty—education-first, boutique guidance." />
 
   <style>
     :root{
@@ -13,324 +13,200 @@
       --muted:#5b554c;
       --cream:#fbf7f0;
       --paper:#ffffff;
-      --line: rgba(44,42,38,.10);
-      --shadow: 0 18px 45px rgba(44,42,38,.10);
-      --radius: 20px;
+      --line: rgba(122,106,79,.22);
+      --shadow: 0 14px 45px rgba(44,42,38,.10);
+      --radius: 22px;
     }
 
-    *{ box-sizing: border-box; }
+    *{box-sizing:border-box}
     body{
       margin:0;
       font-family: ui-serif, Georgia, "Times New Roman", serif;
-      color: var(--ink);
+      color:var(--ink);
       background:
-        radial-gradient(1200px 700px at 20% 20%, rgba(122,106,79,.12), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(122,106,79,.10), transparent 55%),
+        radial-gradient(1200px 700px at 20% 0%, rgba(122,106,79,.12), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(122,106,79,.08), transparent 55%),
         var(--cream);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
 
-    .wrap{
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 22px 20px 44px;
-    }
+    a{color:var(--ink); text-decoration:underline; text-decoration-color:rgba(122,106,79,.45); text-underline-offset:3px}
+    a:hover{color:var(--brand)}
 
-    /* Top bar */
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(251,247,240,.86);
+    /* ===== TOP NAV ===== */
+    header.topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(251,247,240,.85);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-
     .topbar .row{
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 12px 20px;
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 20px;
       display:flex;
-      justify-content: space-between;
       align-items:center;
-      gap: 14px;
+      justify-content:space-between;
+      gap:14px;
     }
-
     .brand{
-      font-weight: 700;
-      letter-spacing: .2px;
-      color: var(--ink);
-      text-decoration: none;
-      white-space: nowrap;
+      font-weight:700;
+      letter-spacing:.02em;
+      text-transform:none;
+      text-decoration:none;
     }
-
     nav.menu{
       display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:.95rem;
     }
-
     nav.menu a{
-      color: var(--ink);
-      text-decoration: none;
-      font-size: .98rem;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
+      color:var(--muted);
     }
     nav.menu a:hover{
-      border-color: var(--line);
-      background: rgba(255,255,255,.55);
+      border-color:var(--line);
+      background:rgba(255,255,255,.7);
+      color:var(--ink);
     }
 
-    /* Hero */
+    /* ===== PAGE WRAP ===== */
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:18px 20px 60px;
+    }
+
+    /* ===== HERO ===== */
     .hero{
-       max-width: 900px;
-  margin: 80px auto;
-  padding: 60px 50px;
-  text-align: center;
-
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(14px);
-
-  border-radius: 18px;
-  border: 1px solid #e5e2dc;
-  box-shadow: 0 20px 60px rgba(44,42,38,.08);
-}
-
-.hero p{
-  font-size: 1.05rem;
-  color: #6b675f;
-  max-width: 560px;
-  margin: 18px auto 0;
-}
+      margin-top:18px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(122,106,79,.18);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding:34px;
+      overflow:hidden;
+      position:relative;
     }
-
     .kicker{
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: .78rem;
-      color: var(--muted);
-      margin: 0 0 10px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.75rem;
+      color:var(--muted);
+      margin:0 0 10px;
     }
-
     h1{
-     
-
+      margin:0 0 10px;
+      font-size: clamp(2.1rem, 4vw, 3.1rem);
+      line-height:1.05;
+      letter-spacing:-.01em;
+      color:var(--ink);
+    }
     .lead{
-      margin: 0 0 18px;
-      color: var(--muted);
-      max-width: 62ch;
+      margin:0;
+      max-width:62ch;
+      color:var(--muted);
+      font-size:1.05rem;
     }
-
-    .pillbar{
+    .ctaRow{
+      margin-top:18px;
       display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    .pillbar a{
+    .pill{
       display:inline-flex;
       align-items:center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      text-decoration: none;
-      color: var(--ink);
-      background: rgba(255,255,255,.65);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size: .95rem;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.7);
+      text-decoration:none;
+      color:var(--ink);
     }
-    .pillbar a.primary{
-      background: var(--brand);
-      color: #fff;
-      border-color: transparent;
+    .pill.primary{
+      background:rgba(122,106,79,.12);
+      border-color:rgba(122,106,79,.35);
     }
 
-    /* Cards */
+    /* ===== FEATURE GRID ===== */
     .grid{
-      margin-top: 18px;
+      margin-top:18px;
       display:grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
+      gap:14px;
     }
-
     .card{
       grid-column: span 6;
-      padding: 18px 18px 16px;
-      background: rgba(255,255,255,.70);
-      border: 1px solid var(--line);
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(122,106,79,.18);
       border-radius: var(--radius);
+      padding:18px;
       box-shadow: 0 10px 26px rgba(44,42,38,.08);
     }
-
     .card h3{
-      margin: 0 0 6px;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
+      margin:0 0 6px;
+      font-size:1.05rem;
+      letter-spacing:.01em;
     }
-
     .card p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
+      margin:0;
+      color:var(--muted);
     }
 
-    /* Sections */
+    /* ===== SECTIONS ===== */
     section{
-      margin-top: 22px;
+      margin-top:22px;
     }
-
-    .section-title{
-      margin: 0 0 8px;
-      font-size: 1.35rem;
+    h2{
+      margin:0 0 10px;
+      font-size:1.6rem;
+      line-height:1.15;
     }
-
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 22px 0;
+    .sectionBox{
+      background:rgba(255,255,255,.65);
+      border:1px solid rgba(122,106,79,.16);
+      border-radius: var(--radius);
+      padding:18px;
     }
 
     footer{
-      padding: 18px 0 28px;
-      color: var(--muted);
-      font-size: .95rem;
+      margin-top:26px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:.95rem;
     }
 
-    /* Mobile */
-    @media (max-width: 700px){
-      h1{ font-size: 2.05rem; }
-      .hero{ padding: 22px 18px; }
-      .card{ grid-column: span 12; }
-      .topbar .row{ padding: 12px 14px; }
-      .wrap{ padding: 18px 14px 40px; }
+    /* ===== MOBILE ===== */
+    @media (max-width: 900px){
+      .card{grid-column: span 12;}
+      .hero{padding:24px;}
+      .topbar .row{padding:12px 14px;}
+      .wrap{padding:16px 14px 50px;}
     }
-    /* === LUXURY UPGRADE (paste at END of your CSS) === */
-
-/* slightly richer palette + softer contrast */
-:root{
-  --cream:#fbf6ee;
-  --paper: rgba(255,255,255,.78);
-  --line: rgba(44,42,38,.12);
-  --shadow: 0 22px 60px rgba(44,42,38,.12);
-}
-
-/* luxe background texture + calmer type */
-body{
-  background:
-    radial-gradient(1200px 760px at 18% 18%, rgba(122,106,79,.14), transparent 60%),
-    radial-gradient(900px 520px at 92% 12%, rgba(122,106,79,.10), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)),
-    var(--cream);
-}
-
-/* tighter, premium header */
-.topbar{
-  background: rgba(251,246,238,.78);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(44,42,38,.10);
-}
-.brand{
-  letter-spacing: .3px;
-}
-
-/* menu links look like refined tabs */
-nav.menu a{
-  font-size: .95rem;
-  padding: 9px 12px;
-  border: 1px solid rgba(44,42,38,.10);
-  background: rgba(255,255,255,.35);
-}
-nav.menu a:hover{
-  background: rgba(255,255,255,.65);
-  border-color: rgba(44,42,38,.16);
-}
-
-/* hero becomes a “glass card” */
-.hero{
-  background: var(--paper);
-  border: 1px solid rgba(44,42,38,.10);
-  box-shadow: var(--shadow);
-}
-.kicker{
-  font-size: .76rem;
-  letter-spacing: .18em;
-}
-h1{
-    margin: 0 0 12px;
-  font-size: 2.8rem;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 600;
-}
-}
-
-/* luxe buttons */
-.pillbar a{
-  padding: 11px 14px;
-  border: 1px solid rgba(44,42,38,.12);
-  background: rgba(255,255,255,.55);
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-}
-.pillbar a:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.78);
-  border-color: rgba(44,42,38,.18);
-}
-.pillbar a.primary{
-  background: linear-gradient(135deg, #7A6A4F, #6b5c45);
-  box-shadow: 0 12px 30px rgba(122,106,79,.28);
-}
-
-/* cards feel elevated + refined */
-.card{
-  background: rgba(255,255,255,.74);
-  border: 1px solid rgba(44,42,38,.10);
-  box-shadow: 0 14px 40px rgba(44,42,38,.10);
-}
-.card h3{
-  letter-spacing: -0.02em;
-}
-.card p{
-  line-height: 1.7;
-}
-
-/* section dividers more elegant */
-.divider{
-  background: linear-gradient(90deg, transparent, rgba(44,42,38,.14), transparent);
-}
-
-/* a touch of “boutique print” feel */
-main.wrap{
-  position: relative;
-}
-main.wrap:before{
-  content:"";
-  position:absolute;
-  inset:-20px -10px auto -10px;
-  height: 220px;
-  pointer-events:none;
-  background:
-    radial-gradient(2px 2px at 20px 30px, rgba(44,42,38,.05), transparent 60%),
-    radial-gradient(2px 2px at 160px 80px, rgba(44,42,38,.04), transparent 60%),
-    radial-gradient(2px 2px at 320px 40px, rgba(44,42,38,.04), transparent 60%),
-    radial-gradient(2px 2px at 520px 120px, rgba(44,42,38,.03), transparent 60%);
-  opacity: .9;
-}
   </style>
 </head>
 
 <body>
-  <div class="topbar">
+  <header class="topbar">
     <div class="row">
       <a class="brand" href="index.html">Sportnduck Lifestyle Boutique</a>
+
       <nav class="menu" aria-label="Top navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -338,25 +214,25 @@ main.wrap:before{
         <a href="contact.html">Contact</a>
       </nav>
     </div>
-  </div>
+  </header>
 
   <main class="wrap">
-    <div class="hero">
-      <div class="kicker">Cozy Wellness • Boutique Lifestyle • Education-First</div>
+    <section class="hero">
+      <p class="kicker">Cozy wellness • boutique lifestyle • education-first</p>
       <h1>Curated Style. Intentional Wellness. Smart Beauty.</h1>
       <p class="lead">
         Welcome to Sportnduck — a warm, boutique space for lifestyle guidance and clear education.
         Simple routines, thoughtful recommendations, and a personal touch that feels like home.
       </p>
 
-      <div class="pillbar">
-        <a class="primary" href="contact.html">Contact</a>
-        <a href="services.html">See Services</a>
-        <a href="resources.html">Client Resources</a>
+      <div class="ctaRow">
+        <a class="pill primary" href="contact.html">Contact</a>
+        <a class="pill" href="resources.html">Resources</a>
+        <span style="color:var(--muted);">✨ Concierge-style support</span>
       </div>
-    </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid" aria-label="Highlights">
       <div class="card">
         <h3>Style, Simplified</h3>
         <p>Wearable guidance that fits your real life — elevated, effortless, and you.</p>
@@ -370,33 +246,32 @@ main.wrap:before{
         <p>Ingredient clarity and routines that reduce overwhelm and build results you understand.</p>
       </div>
       <div class="card">
-        <h3>Concierge Support</h3>
-        <p>Personal shopping + product pairing help, tailored to your goals and budget.</p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <section>
-      <h2 class="section-title">Client Education Library</h2>
-      <p style="margin:0;color:var(--muted);max-width:72ch;">
-        Downloadable guides are coming soon — peptides, LED routines, skin layers, safety cards, and more.
-      </p>
-      <div class="pillbar" style="margin-top:12px;">
-        <a href="contact.html">Request a Guide</a>
-        <a href="services.html">Book a Service</a>
+        <h3>Client-First Recommendations</h3>
+        <p>Thoughtful picks tailored to your budget, skin, lifestyle, and goals.</p>
       </div>
     </section>
 
-    <div class="divider"></div>
+    <section>
+      <h2>Client Education Library</h2>
+      <div class="sectionBox">
+        <p style="margin:0;color:var(--muted)">
+          Downloadable guides are coming soon — peptides, LED routines, skin layers, safety cards, and more.
+        </p>
+        <p style="margin:12px 0 0;">
+          <a href="resources.html">Request a Guide</a> &nbsp;•&nbsp; <a href="services.html">See Services</a>
+        </p>
+      </div>
+    </section>
 
     <section>
-      <h2 class="section-title">Connect With Sportnduck</h2>
-      <p style="margin:0;color:var(--muted);max-width:72ch;">
-        For questions, concierge help, or workshop info — reach out anytime.
-      </p>
-      <div class="pillbar" style="margin-top:12px;">
-        <a href="contact.html">Contact Page</a>
+      <h2>Connect With Sportnduck</h2>
+      <div class="sectionBox">
+        <p style="margin:0;color:var(--muted)">
+          For questions, concierge help, or workshop info — reach out anytime.
+        </p>
+        <p style="margin:12px 0 0;">
+          <a href="contact.html">Email / Text</a>
+        </p>
       </div>
     </section>
 
@@ -405,4 +280,4 @@ main.wrap:before{
     </footer>
   </main>
 </body>
-</html> 
+</html>
