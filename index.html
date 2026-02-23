@@ -1,10 +1,10 @@
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sportnduck Lifestyle Boutique</title>
+  <meta name="description" content="Curated style, intentional wellness, and smart beauty education." />
 
   <style>
     :root{
@@ -13,364 +13,275 @@
       --muted:#5b554c;
       --cream:#fbf7f0;
       --paper:#ffffff;
-      --line:rgba(122,106,79,.22);
-      --shadow:0 18px 45px rgba(44,42,38,.10);
-      --radius:20px;
+      --line: rgba(44,42,38,.10);
+      --shadow: 0 18px 45px rgba(44,42,38,.10);
+      --radius: 20px;
     }
 
-    *{box-sizing:border-box}
-
+    *{ box-sizing: border-box; }
     body{
       margin:0;
       font-family: ui-serif, Georgia, "Times New Roman", serif;
-      color:var(--ink);
+      color: var(--ink);
       background:
-        radial-gradient(1200px 700px at 20% 0%, rgba(122,106,79,.08), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(251,247,240,.75), transparent 55%),
+        radial-gradient(1200px 700px at 20% 20%, rgba(122,106,79,.12), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(122,106,79,.10), transparent 55%),
         var(--cream);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    .wrap{max-width:1100px;margin:0 auto;padding:18px 20px}
+    .wrap{
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 22px 20px 44px;
+    }
 
-    /* ONE top navigation */
+    /* Top bar */
     .topbar{
-      position:sticky; top:0; z-index:50;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251,247,240,.86);
       backdrop-filter: blur(10px);
-      background: rgba(251,247,240,.78);
-      border-bottom:1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
+
     .topbar .row{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      gap: 14px;
     }
+
     .brand{
-      font-weight:700; letter-spacing:.2px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
     }
-    .menu a{
-      color:var(--ink);
-      text-decoration:none;
-      margin-left:14px;
-      font-size:0.98rem;
-    }
-    .menu a:hover{ text-decoration:underline; }
 
+    nav.menu{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items:center;
+    }
+
+    nav.menu a{
+      color: var(--ink);
+      text-decoration: none;
+      font-size: .98rem;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    nav.menu a:hover{
+      border-color: var(--line);
+      background: rgba(255,255,255,.55);
+    }
+
+    /* Hero */
     .hero{
-      margin-top:18px;
-      background:var(--paper);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:34px;
+      margin-top: 18px;
+      padding: 34px 28px;
+      background: rgba(255,255,255,.70);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
-    .kicker{letter-spacing:.25em; font-size:.78rem; color:var(--muted)}
-    h1{margin:10px 0 10px; font-size:2.2rem; line-height:1.1}
-    p{margin:10px 0; color:var(--muted); line-height:1.55; max-width:70ch}
 
-    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      text-decoration:none;
+    .kicker{
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size:.95rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      color: var(--muted);
+      margin: 0 0 10px;
     }
-    .btn.primary{background:var(--brand); color:#fff; border-color:transparent}
-    .btn.ghost{background:transparent; color:var(--ink)}
 
-    .section{margin:26px 0}
-    .section h2{margin:0 0 8px}
-    .footer{padding:28px 0; color:var(--muted); font-size:.95rem}
-
-    @media (max-width:700px){
-      h1{font-size:1.85rem}
-      .menu a{margin-left:10px}
-      .hero{padding:22px}
+    h1{
+      margin: 0 0 10px;
+      font-size: 2.6rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
     }
-    /* ===== TOP NAVIGATION ===== */
 
-.topbar{
-  position:sticky;
-  top:0;
-  background:rgba(251,247,240,.85);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-  z-index:50;
-} /* ===== BOUTIQUE PAGE LAYOUT ===== */
+    .lead{
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
 
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:40px 22px;
-}
+    .pillbar{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .pillbar a{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(255,255,255,.65);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    .pillbar a.primary{
+      background: var(--brand);
+      color: #fff;
+      border-color: transparent;
+    }
 
-.section{
-  background:rgba(255,255,255,.6);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:28px;
-  margin:28px 0;
-  box-shadow:0 18px 45px rgba(44,42,38,.08);
-}
+    /* Cards */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
 
-h1{
-  font-size:2.6rem;
-  letter-spacing:-.5px;
-}
+    .card{
+      grid-column: span 6;
+      padding: 18px 18px 16px;
+      background: rgba(255,255,255,.70);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 26px rgba(44,42,38,.08);
+    }
 
-p{
-  line-height:1.7;
-  color:var(--muted);
-}
+    .card h3{
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+    }
 
-.topbar .row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
 
-.brand{
-  font-weight:700;
-}
+    /* Sections */
+    section{
+      margin-top: 22px;
+    }
 
-.menu a{
-  text-decoration:none;
-  color:var(--ink);
-  margin-left:14px;
-  font-size:.95rem;
-}
+    .section-title{
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
 
-.menu a:hover{
-  text-decoration:underline;
-}
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 22px 0;
+    }
 
-/* ===== HERO CARD ===== */
+    footer{
+      padding: 18px 0 28px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
 
-.hero{
-  margin-top:20px;
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:34px;
-}
-    /* =========================
-   BOUTIQUE UPGRADE LAYER
-   Paste ABOVE </style>
-   ========================= */
-
-:root{
-  --max: 1040px;
-  --radius-lg: 26px;
-  --shadow-soft: 0 14px 45px rgba(44,42,38,.10);
-}
-
-/* global polish */
-body{
-  line-height: 1.65;
-  letter-spacing: .01em;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-.wrap{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 18px 20px 70px;
-}
-
-/* top nav = luxe + clean */
-.topbar{
-  background: rgba(251,247,240,.86);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(122,106,79,.20);
-}
-
-.topbar .row{
-  padding: 12px 2px;
-}
-
-.brand{
-  font-weight: 700;
-  letter-spacing: .02em;
-}
-
-.menu a{
-  padding: 8px 10px;
-  border-radius: 999px;
-  transition: background .2s ease, transform .2s ease;
-}
-
-.menu a:hover{
-  background: rgba(122,106,79,.10);
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-/* hero card = boutique “invitation” */
-.hero{
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(122,106,79,.18);
-  background: rgba(255,255,255,.55);
-}
-
-.hero h1{
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.note{
-  opacity: .9;
-}
-
-/* links = elegant */
-a{
-  color: var(--ink);
-  text-decoration-color: rgba(122,106,79,.45);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-a:hover{
-  text-decoration-color: rgba(122,106,79,.85);
-}
-
-/* buttons = boutique pill style */
-.btns{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-}
-
-.btn,
-a.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(122,106,79,.28);
-  background: rgba(255,255,255,.55);
-  text-decoration:none;
-  font-weight: 600;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-}
-
-.btn:hover,
-a.btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(44,42,38,.12);
-  background: rgba(255,255,255,.72);
-}
-
-.btn.primary{
-  background: rgba(122,106,79,.92);
-  color: #fff;
-  border-color: rgba(122,106,79,.70);
-}
-
-.btn.primary:hover{
-  background: rgba(122,106,79,1);
-}
-
-/* section headings = airy + premium */
-h2{
-  margin-top: 30px;
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-hr{
-  border: 0;
-  border-top: 1px solid rgba(122,106,79,.16);
-  margin: 26px 0;
-}
-
-/* card grid (if you have feature cards) */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
-}
-
-.card{
-  grid-column: span 6;
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(122,106,79,.16);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 10px 30px rgba(44,42,38,.08);
-}
-
-.card h3{
-  margin: 0 0 6px;
-}
-
-@media (max-width: 900px){
-  .card{ grid-column: span 12; }
-  .hero{ padding: 24px; }
-}
-
-@media (max-width: 520px){
-  .wrap{ padding: 14px 14px 56px; }
-  .menu a{ padding: 8px 8px; }
-  .hero h1{ font-size: 2.05rem; }
-}
+    /* Mobile */
+    @media (max-width: 700px){
+      h1{ font-size: 2.05rem; }
+      .hero{ padding: 22px 18px; }
+      .card{ grid-column: span 12; }
+      .topbar .row{ padding: 12px 14px; }
+      .wrap{ padding: 18px 14px 40px; }
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-  <header class="topbar">
-    <div class="wrap row">
-      <div class="brand">Sportnduck Lifestyle Boutique</div>
-      <nav class="menu">
+  <div class="topbar">
+    <div class="row">
+      <a class="brand" href="index.html">Sportnduck Lifestyle Boutique</a>
+      <nav class="menu" aria-label="Top navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="resources.html">Resources</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
 
   <main class="wrap">
-    <section class="hero">
-      <div class="kicker">COZY WELLNESS • BOUTIQUE LIFESTYLE • EDUCATION-FIRST</div>
+    <div class="hero">
+      <div class="kicker">Cozy Wellness • Boutique Lifestyle • Education-First</div>
       <h1>Curated Style. Intentional Wellness. Smart Beauty.</h1>
-      <p>
+      <p class="lead">
         Welcome to Sportnduck — a warm, boutique space for lifestyle guidance and clear education.
         Simple routines, thoughtful recommendations, and a personal touch that feels like home.
       </p>
 
-      <div class="btns">
-        <a class="btn primary" href="resources.html">Resources</a>
-        <a class="btn ghost" href="contact.html">Contact</a>
-        <a class="btn ghost" href="services.html">See Services</a>
+      <div class="pillbar">
+        <a class="primary" href="contact.html">Contact</a>
+        <a href="services.html">See Services</a>
+        <a href="resources.html">Client Resources</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Style, Simplified</h3>
+        <p>Wearable guidance that fits your real life — elevated, effortless, and you.</p>
+      </div>
+      <div class="card">
+        <h3>Wellness, Made Easy</h3>
+        <p>Small daily upgrades that support energy, calm, and confident living.</p>
+      </div>
+      <div class="card">
+        <h3>Beauty Education</h3>
+        <p>Ingredient clarity and routines that reduce overwhelm and build results you understand.</p>
+      </div>
+      <div class="card">
+        <h3>Concierge Support</h3>
+        <p>Personal shopping + product pairing help, tailored to your goals and budget.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2 class="section-title">Client Education Library</h2>
+      <p style="margin:0;color:var(--muted);max-width:72ch;">
+        Downloadable guides are coming soon — peptides, LED routines, skin layers, safety cards, and more.
+      </p>
+      <div class="pillbar" style="margin-top:12px;">
+        <a href="contact.html">Request a Guide</a>
+        <a href="services.html">Book a Service</a>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Style, Simplified</h2>
-      <p>Wearable guidance that fits your real life — elevated, effortless, and you.</p>
+    <div class="divider"></div>
+
+    <section>
+      <h2 class="section-title">Connect With Sportnduck</h2>
+      <p style="margin:0;color:var(--muted);max-width:72ch;">
+        For questions, concierge help, or workshop info — reach out anytime.
+      </p>
+      <div class="pillbar" style="margin-top:12px;">
+        <a href="contact.html">Contact Page</a>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Wellness, Made Easy</h2>
-      <p>Small daily upgrades that support energy, calm, and confident living.</p>
-    </section>
-
-    <section class="section">
-      <h2>Beauty Education</h2>
-      <p>Ingredient clarity and routines that reduce overwhelm and build results you understand.</p>
-    </section>
-
-    <div class="footer">
-      2026 Sportnduck Lifestyle Boutique • Warmly curated, always.
-  
+    <footer>
+      © 2026 Sportnduck Lifestyle Boutique • Warmly curated, always.
+    </footer>
   </main>
-  </header>
-  </div> 
 </body>
-</htm
+</html> 
