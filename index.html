@@ -238,6 +238,58 @@ a:hover {
       color:var(--muted);
     }
   </style>
+  /* Layout helpers */
+.wrap{max-width:1100px;margin:0 auto;padding:18px 20px;}
+.hero{padding:28px 0 10px;}
+.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;opacity:.75;}
+h1{margin:.35rem 0 1rem;line-height:1.05;font-size:2.6rem;}
+p{line-height:1.6;}
+
+/* Top bar */
+.topbar{
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(247,247,240,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(122,106,79,.22);
+}
+.topbar .row{display:flex;justify-content:space-between;align-items:center;gap:14px;}
+.brand{font-weight:700;}
+.menu{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end;}
+.menu a{color:#2c2a26;text-decoration:none;}
+.menu a:hover{opacity:.75;}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:999px;
+  border:1px solid rgba(122,106,79,.22);
+  text-decoration:none;
+}
+.btn.primary{background:#7A6A4F;color:#fbf7f0;border-color:transparent;}
+.btn.ghost{background:rgba(255,255,255,.6);color:#2c2a26;}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+
+/* Cards grid */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin:18px 0 28px;
+}
+.card{
+  background: rgba(255,255,255,.55);
+  border:1px solid rgba(122,106,79,.18);
+  border-radius:20px;
+  padding:16px;
+}
+.card h3{margin:0 0 6px;}
+.card p{margin:0;opacity:.9;font-size:.95rem;}
+
+/* Mobile */
+@media (max-width: 900px){
+  .grid{grid-template-columns:1fr;}
+  h1{font-size:2.1rem;}
+} 
 </head>
 
 <body>
