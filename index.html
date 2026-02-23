@@ -1,1 +1,190 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportnduck | Services</title>
+  <meta name="description" content="Concierge-style lifestyle services: style, wellness, and beauty education — by appointment only." />
+
+  <style>
+    :root{
+      --brand:#7A6A4F;
+      --ink:#2c2a26;
+      --muted:#5b554c;
+      --cream:#fbf7f0;
+      --paper:#ffffff;
+      --line:rgba(122,106,79,.22);
+      --shadow:0 18px 45px rgba(44,42,38,.10);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(122,106,79,.12), transparent 55%),
+        radial-gradient(900px 500px at 85% 15%, rgba(122,106,79,.10), transparent 50%),
+        var(--cream);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:26px 18px 70px}
+    .topbar{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:saturate(1.2) blur(10px);
+      background:rgba(251,247,240,.78);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:1100px;margin:0 auto;padding:14px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .brand{
+      display:flex;flex-direction:column;gap:2px;line-height:1;
+      letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:var(--muted);
+    }
+    .brand strong{
+      letter-spacing:0;text-transform:none;font-size:18px;color:var(--ink);
+    }
+    .menu{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .menu a{
+      color:var(--ink);text-decoration:none;font-size:14px;
+      padding:8px 10px;border-radius:999px;
+    }
+    .menu a:hover{background:rgba(122,106,79,.10)}
+    .menu .cta{
+      background:var(--brand);color:white;
+      padding:9px 14px;border-radius:999px;
+      box-shadow:0 12px 30px rgba(122,106,79,.25);
+    }
+    .menu .cta:hover{filter:brightness(.97)}
+    .card{
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero{padding:34px 26px;margin-top:22px}
+    .kicker{
+      font-family: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+      text-transform:uppercase;letter-spacing:.18em;
+      font-size:11px;color:var(--muted);
+    }
+    h1{margin:10px 0 10px;font-size:44px;line-height:1.05}
+    p{margin:0;color:var(--muted);font-size:16px;line-height:1.7}
+    .grid{
+      display:grid;gap:16px;margin-top:18px;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} h1{font-size:36px} }
+    .svc{padding:18px}
+    .svc h3{margin:6px 0 8px;font-size:18px;color:var(--ink)}
+    .tag{
+      display:inline-flex;gap:8px;align-items:center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.65);
+    }
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .ctaBar{
+      margin-top:18px;padding:18px;
+      display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+    }
+    .btnRow{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;text-decoration:none;
+      padding:11px 16px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.70);
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+      font-size:14px;
+      transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(44,42,38,.10)}
+    .btn.primary{background:var(--brand);color:white;border-color:transparent}
+    .note{font-size:13px;color:var(--muted)}
+    /* subtle luxury animation */
+    .reveal{animation:fadeUp .45s ease both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @media (prefers-reduced-motion: reduce){ .reveal{animation:none} }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="nav">
+      <div class="brand">
+        <span>SPORTNDUCK</span>
+        <strong>Lifestyle Boutique</strong>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html"class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card hero reveal">
+      <div class="kicker">Concierge • Appointment Only • Education-First</div>
+      <h1>Services, curated for you.</h1>
+      <p>
+        Every Sportnduck service is personalized and offered by appointment.
+        We keep it simple: clear recommendations, thoughtful routines, and a warm boutique experience.
+      </p>
+
+      <div class="grid">
+        <div class="card svc reveal" style="animation-delay:.05s">
+          <span class="tag">Style • Closet • Shopping</span>
+          <h3>Personal Styling + Concierge Shopping</h3>
+          <p>Outfits that feel effortless — tailored to your life, budget, and taste.</p>
+          <ul class="list">
+            <li>Capsule wardrobe + outfit formulas</li>
+            <li>Event styling + gifting</li>
+            <li>Virtual or in-person concierge shopping</li>
+          </ul>
+        </div>
+
+        <div class="card svc reveal" style="animation-delay:.1s">
+          <span class="tag">Wellness • Routine • Home</span>
+          <h3>Wellness Made Easy</h3>
+          <p>Small upgrades that support energy, calm, and confidence.</p>
+          <ul class="list">
+            <li>Daily routine guidance</li>
+            <li>Wellness tools + product curation</li>
+            <li>Cozy lifestyle support (home + habits)</li>
+          </ul>
+        </div>
+
+        <div class="card svc reveal" style="animation-delay:.15s">
+          <span class="tag">Beauty • Education • Results</span>
+          <h3>Beauty Education + Smart Routines</h3>
+          <p>Ingredient clarity and routines you can actually stick to.</p>
+          <ul class="list">
+            <li>Product pairing + layering help</li>
+            <li>Sensitivity-safe guidance</li>
+            <li>Education-first recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card ctaBar reveal" style="animation-delay:.2s">
+        <div>
+          <div class="note"><strong>Appointment-only:</strong> choose a contact method below to begin.</div>
+        </div>
+        <div class="btnRow">
+          <!-- Replace the phone/email with yours -->
+          <a class="btn primary" href="/contact.html">Book via Contact</a>
+          <a class="btn" href="mailto:hello@sportnduck.com?subject=Sportnduck%20Appointment%20Request">Email Concierge</a>
+          <a class="btn" href="sms:+19082161661">Text to Book</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
