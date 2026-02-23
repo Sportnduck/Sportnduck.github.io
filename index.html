@@ -96,6 +96,31 @@
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
   z-index:50;
+} /* ===== BOUTIQUE PAGE LAYOUT ===== */
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 22px;
+}
+
+.section{
+  background:rgba(255,255,255,.6);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+  margin:28px 0;
+  box-shadow:0 18px 45px rgba(44,42,38,.08);
+}
+
+h1{
+  font-size:2.6rem;
+  letter-spacing:-.5px;
+}
+
+p{
+  line-height:1.7;
+  color:var(--muted);
 }
 
 .topbar .row{
@@ -296,6 +321,7 @@ hr{
 </head>
 
 <body>
+  <div class="wrap">
   <header class="topbar">
     <div class="wrap row">
       <div class="brand">Sportnduck Lifestyle Boutique</div>
@@ -341,7 +367,9 @@ hr{
 
     <div class="footer">
       2026 Sportnduck Lifestyle Boutique • Warmly curated, always.
-    </div>
+  
   </main>
+  </header>
+  </div>
 </body>
 </htm
