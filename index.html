@@ -116,10 +116,11 @@ border-radius: 18px;
 
     /* ===== SIGNATURE TOUCH DIVIDER ===== */
     .sig-divider{
+      opacity: .85;
       max-width:760px;
       margin:28px auto 0;
       height:1px;
-      background: linear-gradient(90deg, transparent, var(--line), transparent);
+      background: linear-gradient(90deg, transparent, rgba (122.106,79, .35), transparent);
       position:relative;
     }
     .sig-divider:after{
@@ -169,7 +170,7 @@ border-radius: 18px;
       border:1px solid var(--line);
       border-radius: var(--radius);
       padding:18px 18px 16px;
-      box-shadow: 0 10px 28px rgba(44,42,38,.06);
+      box-shadow: 0 14px 40px rgba(44,42,38,.10),0 2px 6px rgba(44,42,38, .06); border: 1px solid rgba (122,106,79, .22);
       transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
     }
     .card h3{
