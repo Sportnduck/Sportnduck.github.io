@@ -216,7 +216,58 @@ border-radius: 18px;
       .card{grid-column: span 12;}
       .links{gap:14px;font-size:13px;}
     }
-  </style>
+  /* ===== SPORTNDUCK SIGNATURE FOOTER ===== */
+.sd-footer{
+  margin-top: 40px;
+  border-top: 1px solid rgba(122,106,79,.22);
+  background: rgba(255,255,255,.35);
+  backdrop-filter: blur(8px);
+}
+.sd-footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  text-align: center;
+}
+.sd-wordmark{
+  font-family: "Times New Roman", Georgia, serif;
+  letter-spacing: .22em;
+  font-size: 12px;
+  color: rgba(44,42,38,.75);
+}
+.sd-tagline{
+  margin-top: 8px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #3a372f;
+}
+.sd-links{
+  margin: 14px 0 10px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sd-links a{
+  font-size: 13px;
+  color: rgba(91,85,76,.92);
+  padding: 8px 10px;
+  border-radius: 999px;
+  transition: .18s ease;
+}
+.sd-links a:hover{
+  background: rgba(122,106,79,.10);
+  color: #2c2a26;
+}
+.sd-fine{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(91,85,76,.85);
+  line-height: 1.5;
+}
+    </style>
+  
 </head>
 
 <body>
@@ -302,5 +353,28 @@ border-radius: 18px;
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+<footer class="sd-footer" id="footer">
+  <div class="sd-footer-inner">
+    <div class="sd-mark">
+      <div class="sd-wordmark">SPORTNDUCK</div>
+      <div class="sd-tagline">Curated calm, daily.</div>
+    </div>
+
+    <div class="sd-links">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#top">Back to top</a>
+    </div>
+
+    <div class="sd-fine">
+      © <span id="sd-year"></span> Sportnduck Lifestyle Boutique • Appointment-only concierge services
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('sd-year').textContent = new Date().getFullYear();
+</script>
 </body>
+
 </html>
