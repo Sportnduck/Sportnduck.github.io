@@ -2,130 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sportnduck | Services</title>
-  <meta name="description" content="Sportnduck Lifestyle Boutique — concierge-style lifestyle guidance blending wellness, beauty, and elevated everyday living." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sportnduck | Home</title>
+  <meta name="description" content="Concierge-style lifestyle guidance blending wellness, beauty, and elevated everyday living." />
 
   <style>
     :root{
-      --brand:#7A6A4F;      /* Sportnduck earthy */
-      --ink:#2C2A26;        /* soft black */
-      --muted:#5B554C;      /* warm gray */
+      --brand:#7A6A4F;                /* Sportnduck earthy */
+      --ink:#2c2a26;                  /* soft black */
+      --muted:#5b554c;                /* warm gray */
+      --cream:#FBF7F0;                /* warm cream */
       --paper:#ffffff;
-      --cream:#FBF7F0;
       --line:rgba(122,106,79,.22);
       --shadow:0 18px 45px rgba(44,42,38,.10);
-      --radius:18px;
+      --radius:20px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      color:var(--ink);
-      background:#f7f3ec
-        )
-    
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+      color:var(--ink);
+      background: linear-gradient(180deg, var(--cream) 0%, #f6f1e8 60%, #f3ede3 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+    a{color:inherit;text-decoration:none}
 
-    /* ===== Top Bar ===== */
+    /* ===== TOP BAR (small + clean) ===== */
     .topbar{
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(251,247,240,.88);
+      background: rgba(251,247,240,.88);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
     }
     .nav{
       max-width:1100px;
       margin:0 auto;
-      padding:14px 18px;
+      padding:12px 20px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:18px;
+      gap:16px;
     }
     .brand{
       display:flex;
       flex-direction:column;
       line-height:1.05;
     }
-    .brand .name{
-      font-family: Georgia, "Times New Roman", serif;
-      letter-spacing:.06em;
-      font-size:38px
-      color:var(--muted);
+    .brand span{
+      letter-spacing:.12em;
+      font-size:12px;
       text-transform:uppercase;
+      color:var(--muted);
     }
-    .brand .sub{
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:18px;
+    .brand strong{
+      font-family: "Times New Roman", Georgia, serif;
       font-weight:600;
-      color:var(--ink);
+      font-size:18px;
+      letter-spacing:.02em;
     }
-    .menu{
+    .links{
       display:flex;
       gap:18px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      align-items:center;
-    }
-    .menu a{
-      color:var(--muted);
-      text-decoration:none;
       font-size:14px;
-      padding:8px 10px;
-      border-radius:999px;
-      transition: background .2s ease, color .2s ease, transform .2s ease;
+      color:var(--muted);
     }
-    .menu a:hover{
-      background:rgba(122,106,79,.10);
-      color:var(--ink);
-      transform: translateY(-1px);
-    }
+    .links a:hover{color:var(--ink)}
 
-    /* ===== Layout ===== */
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-    section{padding:56px 0}
-    .card{
-      background:rgba(255,255,255,.72);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    /* ===== Hero ===== */
+    /* ===== HERO (center + soft) ===== */
     .hero{
-      padding:56px 0 34px;
-    }
-    .hero-inner{
-      max-width:820px;
+      max-width:1100px;
       margin:0 auto;
+      padding:48px 20px 22px;
       text-align:center;
     }
     .eyebrow{
-      margin:0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:14px;
-      letter-spacing:.08em;
+      margin:0 auto 12px;
+      font-size:12px;
+      letter-spacing:.18em;
       text-transform:uppercase;
       color:var(--muted);
     }
- 
-.hero h1{
-  font-family:"Times New Roman", Georgia, serif;
-  font-size: clamp(34px, 3.6vw, 44px);
-  font-weight:300;
-  letter-spacing:-0.01em;
-  line-height:1.35;
-  color:#3a372f;
-  margin-bottom:22px;
-}
-
+    .hero h1{
+      font-family:"Times New Roman", Georgia, serif;
+      font-size: clamp(34px, 3.6vw, 44px);
+      font-weight:300;                 /* softer */
+      letter-spacing:-0.01em;
+      line-height:1.35;
+      color:#3a372f;
+      margin:0 0 18px;
+    }
     .hero-text{
       margin:0 auto;
       max-width:640px;
@@ -134,37 +103,45 @@
       line-height:1.7;
     }
 
-    /* Signature divider */
+    /* ===== SIGNATURE TOUCH DIVIDER ===== */
     .sig-divider{
+      max-width:760px;
       margin:28px auto 0;
       height:1px;
-      width:min(520px, 90%);
-      background:linear-gradient(90deg, transparent, var(--brand), transparent);
-      opacity:.6;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+      position:relative;
     }
-    .sig-label{
-      margin:10px auto 0;
-      display:inline-block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:12px;
-      letter-spacing:.16em;
+    .sig-divider:after{
+      content:"SIGNATURE TOUCH";
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      padding:0 12px;
+      background:transparent;
+      color:var(--muted);
+      font-size:11px;
+      letter-spacing:.22em;
       text-transform:uppercase;
-      color:rgba(122,106,79,.85);
     }
 
-    /* ===== Services ===== */
+    /* ===== SERVICES SECTION ===== */
+    .section{
+      max-width:1100px;
+      margin:0 auto;
+      padding:26px 20px 70px;
+    }
     .section-title{
       text-align:center;
-      margin:0 0 10px;
-      font-family: Georgia, "Times New Roman", serif;
+      margin:0 0 8px;
+      font-family:"Times New Roman", Georgia, serif;
+      font-size:30px;
       font-weight:600;
-      font-size:28px;
-      letter-spacing:-0.01em;
     }
     .section-sub{
       text-align:center;
       margin:0 auto 26px;
-      max-width:720px;
+      max-width:680px;
       color:var(--muted);
       line-height:1.7;
       font-size:16px;
@@ -175,85 +152,70 @@
       grid-template-columns: repeat(12, 1fr);
       gap:16px;
     }
-    .service{
+    .card{
       grid-column: span 6;
-      padding:18px 18px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.78);
+      background: rgba(255,255,255,.72);
       border:1px solid var(--line);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      border-radius: var(--radius);
+      padding:18px 18px 16px;
+      box-shadow: 0 10px 28px rgba(44,42,38,.06);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
     }
-    .service:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 22px 55px rgba(44,42,38,.12);
-      border-color: rgba(122,106,79,.34);
-    }
-    .service h3{
+    .card h3{
       margin:0 0 8px;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:"Times New Roman", Georgia, serif;
       font-size:20px;
       font-weight:600;
+      letter-spacing:.01em;
     }
-    .service p{
+    .card p{
       margin:0;
       color:var(--muted);
-      line-height:1.65;
+      line-height:1.7;
       font-size:15px;
     }
 
-    /* ===== Simple sections ===== */
-    .soft{
-      background:rgba(255,255,255,.55);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
+    /* HOVER POLISH */
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(122,106,79,.35);
+      background: rgba(255,255,255,.86);
     }
-    .two-col{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:start;
-    }
-    .mini{
-      padding:18px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.75);
-    }
-    .mini h4{
-      margin:0 0 8px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight:600;
-      font-size:18px;
-    }
-    .mini p{margin:0;color:var(--muted);line-height:1.7;font-size:15px}
 
-    /* ===== Footer ===== */
+    /* ===== FOOTER ===== */
     footer{
-      padding:26px 0 40px;
-      color:rgba(91,85,76,.85);
+      border-top:1px solid var(--line);
+      background: rgba(251,247,240,.6);
+    }
+    .footer-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:18px 20px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      color:var(--muted);
       font-size:13px;
-      text-align:center;
     }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 820px){
-      .hero h1{font-size:36px}
-      .service{grid-column: span 12}
-      .two-col{grid-template-columns:1fr}
-      .menu{gap:10px}
+    /* ===== MOBILE ===== */
+    @media (max-width: 900px){
+      .card{grid-column: span 12;}
+      .links{gap:14px;font-size:13px;}
     }
   </style>
 </head>
 
 <body>
+  <!-- TOP NAV -->
   <header class="topbar">
     <div class="nav">
       <div class="brand">
-        <div class="name">SPORTNDUCK</div>
-        <div class="sub">Lifestyle Boutique</div>
+        <span>Sportnduck</span>
+        <strong>Lifestyle Boutique</strong>
       </div>
-
-      <nav class="menu" aria-label="Primary">
+      <nav class="links" aria-label="Primary">
         <a href="#top">Home</a>
         <a href="#services">Services</a>
         <a href="#resources">Resources</a>
@@ -262,94 +224,71 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <main id="top">
-    <!-- HERO -->
     <section class="hero">
-      <div class="wrap">
-        <div class="hero-inner">
-          <p class="eyebrow">Concierge • Wellness • Education-first</p>
-          <h1>Curated Style. Intentional Wellness.</h1>
-          <p class="hero-text">
-            Concierge lifestyle guidance blending wellness, beauty, and elevated everyday living.
-            Thoughtful recommendations. Simple routines. Luxury made approachable.
-          </p>
-          <div class="sig-divider"></div>
-          <div class="sig-label">Signature Touch</div>
-        </div>
-      </div>
+      <p class="eyebrow">Concierge • Wellness • Education-First</p>
+      <h1>Curated Style. Intentional Wellness.</h1>
+      <p class="hero-text">
+        Concierge lifestyle guidance blending wellness, beauty, and elevated everyday living.
+        Thoughtful recommendations. Simple routines. Luxury made approachable.
+      </p>
+
+      <div class="sig-divider"></div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services">
-      <div class="wrap">
-        <h2 class="section-title">Services</h2>
-        <p class="section-sub">
-          A boutique approach to feeling put-together — with calm, clarity, and a personal plan you can actually follow.
-        </p>
+    <section class="section" id="services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        A boutique approach to feeling put-together — with calm, clarity, and a personal plan you can actually follow.
+      </p>
 
-        <div class="grid">
-          <div class="service">
-            <h3>Concierge Shopping</h3>
-            <p>Personalized picks across fashion, beauty, and home — curated for your lifestyle and budget.</p>
-          </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Capsule + Closet Edit</h3>
+          <p>Streamline what you own, refine your essentials, and build outfits that feel effortless.</p>
+        </article>
 
-          <div class="service">
-            <h3>Capsule + Closet Edit</h3>
-            <p>Streamline what you own, refine your essentials, and build outfits that feel effortless.</p>
-          </div>
+        <article class="card">
+          <h3>Concierge Shopping</h3>
+          <p>Personalized picks across fashion, beauty, and home — curated for your lifestyle and budget.</p>
+        </article>
 
-          <div class="service">
-            <h3>Wellness Routine Reset</h3>
-            <p>Simple, realistic upgrades for energy, calm, and confidence — without the overwhelm.</p>
-          </div>
+        <article class="card">
+          <h3>Wellness Routine Reset</h3>
+          <p>Simple morning + evening rituals, product guidance, and an easy rhythm that supports you.</p>
+        </article>
 
-          <div class="service">
-            <h3>Beauty Education</h3>
-            <p>Ingredient clarity, layering guidance, and routines tailored to your skin goals and sensitivity.</p>
-          </div>
-        </div>
+        <article class="card">
+          <h3>Beauty Education</h3>
+          <p>Ingredient education, safe layering help, and a plan designed for your goals and skin needs.</p>
+        </article>
       </div>
     </section>
 
-    <!-- RESOURCES -->
-    <section id="resources" class="soft">
-      <div class="wrap">
-        <div class="two-col">
-          <div class="mini">
-            <h4>Client Education Library</h4>
-            <p>Downloadable guides (peptides, LED routines, skin layers, safety cards) — coming soon.</p>
-          </div>
-          <div class="mini">
-            <h4>Request a Guide</h4>
-            <p>Tell us what you want next: melasma, sensitive skin, beginner routines, or ingredient explainers.</p>
-          </div>
-        </div>
-      </div>
+    <!-- RESOURCES (placeholder so your nav works) -->
+    <section class="section" id="resources">
+      <h2 class="section-title">Resources</h2>
+      <p class="section-sub">Coming soon — printable guides, ingredient education, and boutique favorites.</p>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">
-          Want help choosing services, building a routine, or curating a capsule? Reach out — we’ll keep it simple.
-        </p>
-
-        <div class="mini" style="max-width:760px;margin:0 auto;text-align:center;">
-          <p><strong style="font-family:Georgia,'Times New Roman',serif;">Email:</strong> hello@sportnduck.com</p>
-          <p style="margin-top:10px;">Or DM us on Instagram to start.</p>
-        </div>
-      </div>
+    <!-- CONTACT (placeholder so your nav works) -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Reply here with your preferred contact method and I’ll add it in clean + pretty.</p>
     </section>
-
-    <footer>
-      © <span id="y"></span> Sportnduck Lifestyle Boutique • Curated • Cozy • Intentional
-    </footer>
   </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="y"></span> Sportnduck</div>
+      <div>Curated calm, daily.</div>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
