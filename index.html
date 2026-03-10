@@ -62,93 +62,77 @@ margin-top:10px;
 
 <body>
 
-<header>
+<<header style="background:#7A6A4F;color:white;padding:70px 20px 60px;text-align:center;">
   <div style="max-width:1000px;margin:0 auto;">
-    <p style="letter-spacing:2px;text-transform:uppercase;font-size:12px;margin:0 0 14px 0;opacity:.9;">
+    <p style="margin:0 0 14px 0;font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.9;">
       Sportnduck Lifestyle Boutique
     </p>
 
-    <h1 style="margin:0;font-size:52px;line-height:1.1;">Curated living, beauty, and skin science.</h1>
+    <h1 style="margin:0;font-size:52px;line-height:1.1;">
+      Concierge lifestyle shopping services
+    </h1>
 
-    <p style="max-width:760px;margin:18px auto 0;font-size:20px;line-height:1.7;">
-      A warm, concierge-style boutique experience featuring elevated skincare education,
-      curated favorites, and thoughtful lifestyle finds.
+    <p style="max-width:760px;margin:22px auto 0;font-size:20px;line-height:1.7;">
+      A personalized boutique experience available in-house or virtually, with a thoughtful focus on
+      skin care science, health and wellness, and elevated everyday living.
     </p>
-
-    <div style="margin-top:26px;">
-      <a href="resources.html" style="display:inline-block;background:white;color:#7A6A4F;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold;margin:0 8px 8px 0;">Shop Curated Favorites</a>
-      <a href="contact.html" style="display:inline-block;border:1px solid white;color:white;text-decoration:none;padding:12px 22px;border-radius:8px;margin:0 8px 8px 0;">Contact Concierge</a>
-    </div>
   </div>
 </header>
-<main>
 
-<div class="card">
-<h2>Ceramides</h2>
-<p>Strengthen the skin barrier and prevent moisture loss.</p>
-<button onclick="toggle('c1')">Learn more</button>
-<div id="c1" class="details">
-<p>Ceramides protect the epidermis and help repair dry or damaged skin.</p>
-</div>
-</div>
+<main style="max-width:1100px;margin:0 auto;padding:40px 20px 70px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;">
 
-<div class="card">
-<h2>Peptides</h2>
-<p>Support collagen signals and skin firmness.</p>
-<button onclick="toggle('c2')">Learn more</button>
-<div id="c2" class="details">
-<p>Peptides communicate with skin cells to support structure and elasticity.</p>
-</div>
-</div>
+    <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(0,0,0,0.08);">
+      <h2 style="margin:0 0 12px 0;color:#7A6A4F;font-size:28px;">Concierge Lifestyle Services</h2>
+      <p style="margin:0 0 16px 0;line-height:1.7;color:#5f564c;">
+        A personalized boutique experience designed to help clients explore thoughtful lifestyle selections
+        in-house or through virtual guidance.
+      </p>
+      <details>
+        <summary style="cursor:pointer;color:#7A6A4F;font-weight:bold;">Learn more</summary>
+        <p style="margin-top:14px;line-height:1.7;color:#5f564c;">
+          Sportnduck offers concierge-style support to help clients discover elevated lifestyle,
+          beauty, and wellness selections in a warm and welcoming way.
+        </p>
+        <p style="margin-top:10px;line-height:1.7;color:#5f564c;">
+          Contact us to schedule an in-house or virtual consultation.
+        </p>
+      </details>
+    </div>
 
-<div class="card">
-<h2>Hyaluronic Acid</h2>
-<p>Deep hydration and moisture retention.</p>
-<button onclick="toggle('c3')">Learn more</button>
-<div id="c3" class="details">
-<p>Helps bind water to the skin and improve softness.</p>
-</div>
-</div>
+    <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(0,0,0,0.08);">
+      <h2 style="margin:0 0 12px 0;color:#7A6A4F;font-size:28px;">Skin Care Science</h2>
+      <p style="margin:0 0 16px 0;line-height:1.7;color:#5f564c;">
+        Explore our interactive guide to ingredients, skin layers, and thoughtful skin education.
+      </p>
+      <a href="skin-science.html" style="display:inline-block;background:#7A6A4F;color:white;text-decoration:none;padding:12px 18px;border-radius:8px;">
+        Open Interactive Guide
+      </a>
+    </div>
 
+    <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(0,0,0,0.08);">
+      <h2 style="margin:0 0 12px 0;color:#7A6A4F;font-size:28px;">Health and Wellness</h2>
+      <p style="margin:0 0 16px 0;line-height:1.7;color:#5f564c;">
+        A curated approach to everyday wellness with supportive selections designed to encourage balance and well-being.
+      </p>
+      <a href="PASTE-YOUR-EXTERNAL-WELLNESS-LINK-HERE" target="_blank" style="display:inline-block;background:#7A6A4F;color:white;text-decoration:none;padding:12px 18px;border-radius:8px;">
+        Explore Wellness
+      </a>
+    </div>
+
+    <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(0,0,0,0.08);">
+      <h2 style="margin:0 0 12px 0;color:#7A6A4F;font-size:28px;">Connect with Sportnduck</h2>
+      <p style="margin:0 0 12px 0;line-height:1.7;color:#5f564c;">
+        We welcome clients both in-house at our boutique and virtually through concierge support.
+      </p>
+      <p style="margin:0;line-height:1.8;color:#5f564c;">
+        Email: becauseyoucan@sportnduck.com<br>
+        Text or call: 908-216-1661
+      </p>
+    </div>
+
+  </div>
 </main>
-
-<script>
-function toggle(id){
-var x=document.getElementById(id);
-if(x.style.display==="block"){
-x.style.display="none";
-}else{
-x.style.display="block";
-}
-}
-</script>
-
-</body>
-  <script>
-...
-</script>
-
-<section style="text-align:center;padding:100px 20px 80px;background:#f4efe6;">
-
-<p style="font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#7A6A4F;margin-bottom:30px;">
-Skin Care Science
-</p>
-
-<blockquote style="font-size:34px;line-height:1.4;color:#7A6A4F;font-style:italic;margin:0;">
-“Your skin is not a problem to be solved,<br>
-it’s a relationship to build.”
-</blockquote>
-
-<p style="margin-top:22px;font-size:16px;color:#6d6458;">
-— Shereene Idriss, MD
-</p>
-
-<p style="margin-top:30px;font-size:18px;line-height:1.7;color:#5f564c;max-width:720px;margin-left:auto;margin-right:auto;">
-Explore ingredients, skin layers, and thoughtful routines designed to support healthy-looking skin.
-Our interactive guide helps make skin care science clear, approachable, and easy to understand.
-</p>
-
-</section>
 
 </body>
 </html>
