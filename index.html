@@ -6,15 +6,16 @@
   <title>SPORTNDUCK Skin Science Guide</title>
   <style>
     :root{
-      --brand:#7A6A4F;
-      --brand-dark:#655740;
-      --cream:#f4efe7;
-      --card:#fffaf5;
-      --text:#2f2a24;
-      --muted:#6e6458;
+      --brand:#8a7658;
+      --brand-deep:#6f5e46;
+      --cream:#f7f2eb;
+      --cream-2:#efe6da;
+      --card:#fffaf4;
       --line:#e7ddd0;
-      --shadow:0 10px 24px rgba(66, 47, 28, 0.10);
-      --radius:18px;
+      --text:#3a3128;
+      --muted:#7b6e60;
+      --shadow:0 14px 34px rgba(86, 65, 39, 0.10);
+      --radius:22px;
     }
 
     *{box-sizing:border-box}
@@ -22,410 +23,147 @@
     body{
       margin:0;
       font-family: Georgia, serif;
-      background:linear-gradient(to bottom, #efe7dc 0%, #f7f2eb 100%);
       color:var(--text);
+      background:
+        radial-gradient(circle at top left, #fbf8f3 0%, #f5eee4 45%, #efe6da 100%);
     }
 
     header{
-      background:linear-gradient(135deg, var(--brand) 0%, #8a7959 100%);
-      color:white;
+      background:linear-gradient(135deg, #9a8768 0%, #7c6a4f 100%);
+      color:#fffdf9;
       text-align:center;
-      padding:56px 20px 42px;
+      padding:70px 20px 58px;
       box-shadow:var(--shadow);
     }
 
     .eyebrow{
       font-size:13px;
-      letter-spacing:2px;
+      letter-spacing:2.5px;
       text-transform:uppercase;
-      opacity:.9;
-      margin-bottom:12px;
+      margin-bottom:14px;
+      opacity:.95;
     }
 
     h1{
       margin:0;
-      font-size:42px;
-      letter-spacing:1px;
+      font-size:58px;
+      line-height:1.05;
+      letter-spacing:.5px;
+      font-weight:700;
     }
 
     .subhead{
-      margin:12px auto 0;
-      max-width:700px;
-      font-size:18px;
-      line-height:1.6;
-      opacity:.95;
+      max-width:880px;
+      margin:20px auto 0;
+      font-size:20px;
+      line-height:1.75;
+      opacity:.97;
     }
 
     main{
-      max-width:1100px;
+      max-width:1180px;
       margin:0 auto;
-      padding:36px 20px 60px;
+      padding:38px 22px 70px;
     }
 
-    .intro-card,
-    .layers-card{
-      background:rgba(255,255,255,0.72);
-      backdrop-filter:blur(6px);
-      border:1px solid rgba(122,106,79,0.12);
+    .panel{
+      background:rgba(255,250,244,.86);
+      border:1px solid rgba(138,118,88,.12);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:28px;
-      margin-bottom:26px;
+      padding:30px;
+      margin-bottom:24px;
+      backdrop-filter:blur(6px);
     }
 
-    h2{
-      margin:0 0 14px;
-      color:var(--brand);
+    .panel h2{
+      margin:0 0 12px;
+      color:var(--brand-deep);
       font-size:34px;
     }
 
-    h3{
-      margin:0 0 10px;
-      color:var(--brand-dark);
-      font-size:24px;
-    }
-
-    p{
-      line-height:1.7;
-      margin:0 0 12px;
-    }
-
-    .layers-list{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .layer-pill{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px;
-      box-shadow:0 4px 14px rgba(66,47,28,0.06);
-    }
-
-    .layer-pill strong{
-      display:block;
-      color:var(--brand-dark);
-      margin-bottom:6px;
+    .panel p{
+      margin:0;
+      line-height:1.8;
       font-size:18px;
+      color:var(--muted);
+    }
+
+    .layers-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .layer-card{
+      background:linear-gradient(180deg, #fffdf9 0%, #faf4ec 100%);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 8px 22px rgba(86,65,39,0.06);
+    }
+
+    .layer-card strong{
+      display:block;
+      font-size:28px;
+      color:var(--brand-deep);
+      margin-bottom:8px;
     }
 
     .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:16px;
       margin:34px 0 18px;
-      flex-wrap:wrap;
+    }
+
+    .section-head h2{
+      margin:0 0 8px;
+      font-size:40px;
+      color:var(--brand-deep);
     }
 
     .section-head p{
-      color:var(--muted);
       margin:0;
-      max-width:700px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.7;
     }
 
-    .card-grid{
+    .ingredients-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:18px;
+      grid-template-columns:repeat(auto-fit,minmax(265px,1fr));
+      gap:20px;
     }
 
     .ingredient-card{
-      background:linear-gradient(180deg, #fffdf9 0%, #fbf6ef 100%);
+      background:linear-gradient(180deg, #fffdf9 0%, #fbf5ed 100%);
       border:1px solid var(--line);
-      border-radius:20px;
+      border-radius:24px;
       box-shadow:var(--shadow);
       overflow:hidden;
       transition:transform .18s ease, box-shadow .18s ease;
     }
 
     .ingredient-card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 14px 28px rgba(66,47,28,0.13);
+      transform:translateY(-4px);
+      box-shadow:0 18px 36px rgba(86,65,39,0.14);
     }
 
     .ingredient-top{
-      padding:18px 18px 12px;
+      padding:22px 22px 14px;
     }
 
     .tag{
       display:inline-block;
+      background:var(--brand);
+      color:white;
+      border-radius:999px;
+      padding:8px 12px;
       font-size:12px;
       letter-spacing:1px;
       text-transform:uppercase;
-      color:white;
-      background:var(--brand);
-      border-radius:999px;
-      padding:7px 10px;
-      margin-bottom:12px;
-    }
-
-    .ingredient-title{
-      font-size:26px;
-      color:var(--brand-dark);
-      margin:0 0 8px;
-    }
-
-    .ingredient-summary{
-      color:var(--muted);
-      line-height:1.6;
-      min-height:72px;
-    }
-
-    .ingredient-toggle{
-      width:100%;
-      border:none;
-      background:transparent;
-      border-top:1px solid var(--line);
-      padding:14px 18px;
-      text-align:left;
-      font-family:inherit;
-      font-size:17px;
-      color:var(--brand-dark);
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .ingredient-toggle:hover{
-      background:rgba(122,106,79,0.05);
-    }
-
-    .ingredient-details{
-      display:none;
-      border-top:1px solid var(--line);
-      padding:18px;
-      background:#fffaf4;
-    }
-
-    .ingredient-card.open .ingredient-details{
-      display:block;
-    }
-
-    .ingredient-card.open .chevron{
-      transform:rotate(180deg);
-    }
-
-    .chevron{
-      transition:transform .2s ease;
-      font-size:18px;
-    }
-
-    .detail-block{
       margin-bottom:14px;
     }
 
-    .detail-block:last-child{
-      margin-bottom:0;
-    }
-
-    .detail-label{
-      font-weight:bold;
-      color:var(--brand-dark);
-      margin-bottom:6px;
-      display:block;
-    }
-
-    ul{
-      margin:8px 0 0 18px;
-      padding:0;
-    }
-
-    li{
-      margin-bottom:8px;
-      line-height:1.6;
-    }
-
-    .footer-note{
-      margin-top:30px;
-      color:var(--muted);
-      font-size:15px;
-      text-align:center;
-    }
-
-    @media (max-width:700px){
-      h1{font-size:34px}
-      h2{font-size:28px}
-      .ingredient-title{font-size:22px}
-      header{padding:46px 18px 34px}
-      main{padding:24px 16px 48px}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="eyebrow">Sportnduck Lifestyle Boutique</div>
-    <h1>Skin Science Guide</h1>
-    <p class="subhead">
-      A warm, elevated ingredient explorer designed to help clients understand what each ingredient does,
-      where it works, and how it supports healthy-looking skin.
-    </p>
-  </header>
-
-  <main>
-    <section class="intro-card">
-      <h2>Luxury Ingredient Explorer</h2>
-      <p>
-        Tap each card below to reveal a simple explanation, ideal placement in a routine,
-        and why the ingredient matters in skin science.
-      </p>
-    </section>
-
-    <section class="layers-card">
-      <h3>Skin Layers at a Glance</h3>
-      <div class="layers-list">
-        <div class="layer-pill">
-          <strong>Epidermis</strong>
-          Surface protection, moisture balance, and barrier defense.
-        </div>
-        <div class="layer-pill">
-          <strong>Dermis</strong>
-          Collagen, elastin, structure, and visible skin resilience.
-        </div>
-        <div class="layer-pill">
-          <strong>Hypodermis</strong>
-          Cushioning, support, and deeper tissue insulation.
-        </div>
-      </div>
-    </section>
-
-    <div class="section-head">
-      <h2>Featured Ingredients</h2>
-      <p>Open each card to explore benefits, skin layer relevance, and routine notes.</p>
-    </div>
-
-    <section class="card-grid">
-      <article class="ingredient-card">
-        <div class="ingredient-top">
-          <span class="tag">Barrier Repair</span>
-          <h3 class="ingredient-title">Ceramides</h3>
-          <p class="ingredient-summary">
-            Essential lipids that help strengthen the skin barrier and reduce moisture loss.
-          </p>
-        </div>
-        <button class="ingredient-toggle" type="button">
-          Explore ingredient
-          <span class="chevron">⌄</span>
-        </button>
-        <div class="ingredient-details">
-          <div class="detail-block">
-            <span class="detail-label">Why it matters</span>
-            Ceramides help reinforce the outer layer of skin, making them especially helpful for dryness, sensitivity, and barrier disruption.
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Best skin layer match</span>
-            Epidermis
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Routine placement</span>
-            Often used after serums and before or within moisturizer.
-          </div>
-        </div>
-      </article>
-
-      <article class="ingredient-card">
-        <div class="ingredient-top">
-          <span class="tag">Collagen Support</span>
-          <h3 class="ingredient-title">Peptides</h3>
-          <p class="ingredient-summary">
-            Signal-style ingredients that support skin firmness and a smoother appearance.
-          </p>
-        </div>
-        <button class="ingredient-toggle" type="button">
-          Explore ingredient
-          <span class="chevron">⌄</span>
-        </button>
-        <div class="ingredient-details">
-          <div class="detail-block">
-            <span class="detail-label">Why it matters</span>
-            Peptides are often used to support a firmer, more resilient look by helping skin communicate more effectively.
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Best skin layer match</span>
-            Dermis-focused support
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Routine placement</span>
-            Usually applied after cleansing and before heavier creams.
-          </div>
-        </div>
-      </article>
-
-      <article class="ingredient-card">
-        <div class="ingredient-top">
-          <span class="tag">Hydration</span>
-          <h3 class="ingredient-title">Hyaluronic Acid</h3>
-          <p class="ingredient-summary">
-            A moisture-attracting ingredient that helps skin feel plumper and more hydrated.
-          </p>
-        </div>
-        <button class="ingredient-toggle" type="button">
-          Explore ingredient
-          <span class="chevron">⌄</span>
-        </button>
-        <div class="ingredient-details">
-          <div class="detail-block">
-            <span class="detail-label">Why it matters</span>
-            Helps pull water into the upper layers of the skin, improving hydration and softness.
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Best skin layer match</span>
-            Epidermis
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Routine placement</span>
-            Best on slightly damp skin before moisturizer.
-          </div>
-        </div>
-      </article>
-
-      <article class="ingredient-card">
-        <div class="ingredient-top">
-          <span class="tag">Renewal</span>
-          <h3 class="ingredient-title">Retinol</h3>
-          <p class="ingredient-summary">
-            A vitamin A derivative often used to support smoother-looking, more refined skin.
-          </p>
-        </div>
-        <button class="ingredient-toggle" type="button">
-          Explore ingredient
-          <span class="chevron">⌄</span>
-        </button>
-        <div class="ingredient-details">
-          <div class="detail-block">
-            <span class="detail-label">Why it matters</span>
-            Retinol supports skin renewal and can help improve the appearance of uneven texture over time.
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Best skin layer match</span>
-            Epidermis with deeper visible benefits
-          </div>
-          <div class="detail-block">
-            <span class="detail-label">Routine placement</span>
-            Usually at night, followed by moisturizer.
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <p class="footer-note">
-      Sportnduck Skin Science Guide · first interactive luxury ingredient edition
-    </p>
-  </main>
-
-  <script>
-    const cards = document.querySelectorAll('.ingredient-card');
-
-    cards.forEach(card => {
-      const button = card.querySelector('.ingredient-toggle');
-      button.addEventListener('click', () => {
-        card.classList.toggle('open');
-      });
-    });
-  </script>
-</body>
-</html>
+    .ingredient-title{
+      margin:0 0 10px;
+     
