@@ -1,445 +1,431 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sportnduck | Home</title>
-  <meta name="description" content="Concierge-style lifestyle guidance blending wellness, beauty, and elevated everyday living." />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPORTNDUCK Skin Science Guide</title>
   <style>
     :root{
-      --brand:#7A6A4F;                /* Sportnduck earthy */
-      --ink:#24221d;                 /* soft black */
-      --muted:#5b554c;                /* warm gray */
-      --cream:#F1E8DA;               /* warm cream */
-      --paper:#ffffff;
-      --line:rgba(122,106,79,.22);
-      --shadow:0 18px 45px rgba(44,42,38,.10);
-      --radius:20px;
+      --brand:#7A6A4F;
+      --brand-dark:#655740;
+      --cream:#f4efe7;
+      --card:#fffaf5;
+      --text:#2f2a24;
+      --muted:#6e6458;
+      --line:#e7ddd0;
+      --shadow:0 10px 24px rgba(66, 47, 28, 0.10);
+      --radius:18px;
     }
+
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-       background:
-linear-gradient(
-180deg,
-#F3E7D6 0%,
-#E6D4BB 55%,
-#DCC6A7 100%
-);
-background-attachment: fixed; 
-                                  
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      font-family: Georgia, serif;
+      background:linear-gradient(to bottom, #efe7dc 0%, #f7f2eb 100%);
+      color:var(--text);
     }
-    a{color:inherit;text-decoration:none}
 
-    /* ===== TOP BAR (small + clean) ===== */
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background: rgba(251,247,240,.88);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:1100px;
-      margin:0 auto;
-      padding:12px 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      display:flex;
-      flex-direction:column;
-      line-height:1.05;
-    }
-    .brand span{
-      letter-spacing:.12em;
-      font-size:12px;
-      text-transform:uppercase;
-      color:var(--muted);
-    }
-    .brand strong{
-      font-family: "Times New Roman", Georgia, serif;
-      font-weight:600;
-      font-size:18px;
-      letter-spacing:.02em;
-    }
-    .links{
-      display:flex;
-      gap:18px;
-      font-size:14px;
-      color:var(--muted);
-    }
-    .links a:hover{color:var(--ink)}
-
-    /* ===== HERO (center + soft) ===== */
-    .hero{
-      background: rgba(255,255,255,0.35);
-backdrop-filter: blur(6px);
-border-radius: 18px;
-      max-width:1100px;
-      margin:0 auto;
-      padding:80px 20px;
+    header{
+      background:linear-gradient(135deg, var(--brand) 0%, #8a7959 100%);
+      color:white;
       text-align:center;
+      padding:56px 20px 42px;
+      box-shadow:var(--shadow);
     }
+
     .eyebrow{
-      margin:0 auto 12px;
-      font-size:12px;
-      letter-spacing:.18em;
+      font-size:13px;
+      letter-spacing:2px;
       text-transform:uppercase;
-      color:var(--muted);
-    }
-    .hero h1{
-      font-family:"Times New Roman", Georgia, serif;
-      font-size: clamp(34px, 3.6vw, 44px);
-      font-weight:300;                 /* softer */
-      letter-spacing:-0.01em;
-      line-height:1.35;
-      color:#3a372f;
-      margin:0 0 18px;
-    }
-    .hero-text{
-      margin:0 auto;
-      max-width:640px;
-      color:var(--muted);
-      font-size:17px;
-      line-height:1.7;
+      opacity:.9;
+      margin-bottom:12px;
     }
 
-    /* ===== SIGNATURE TOUCH DIVIDER ===== */
-    .sig-divider{
-      opacity: .85;
-      max-width:760px;
-      margin:28px auto 0;
-      height:1px;
-      background: linear-gradient(90deg, transparent, rgba (122.106,79, .35), transparent);
-      position:relative;
-    }
-    .sig-divider:after{
-      content:"SIGNATURE TOUCH";
-      position:absolute;
-      left:50%;
-      top:50%;
-      transform:translate(-50%,-50%);
-      padding:0 12px;
-      background:transparent;
-      color:var(--muted);
-      font-size:11px;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-    }
-
-    /* ===== SERVICES SECTION ===== */
-    .section{
-      max-width:1100px;
-      margin:0 auto;
-      padding:80px 20px;
-    }
-    .section-title{
-      text-align:center;
-      margin:0 0 8px;
-      font-family:"Times New Roman", Georgia, serif;
-      font-size:30px;
-      font-weight:600;
-    }
-    .section-sub{
-      text-align:center;
-      margin:0 auto 26px;
-      max-width:680px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:16px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:16px;
-    }
-    .card{
-      grid-column: span 6;
-      background: rgba(255,255,255,.72);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding:18px 18px 16px;
-      box-shadow: 0 14px 40px rgba(44,42,38,.10),0 2px 6px rgba(44,42,38, .06); border: 1px solid rgba (122,106,79, .22);
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-    }
-    .card h3{
-      margin:0 0 8px;
-      font-family:"Times New Roman", Georgia, serif;
-      font-size:20px;
-      font-weight:600;
-      letter-spacing:.01em;
-    }
-    .card p{
+    h1{
       margin:0;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:15px;
+      font-size:42px;
+      letter-spacing:1px;
     }
 
-    /* HOVER POLISH */
-    .card:hover{
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-      border-color: rgba(122,106,79,.35);
-      background: rgba(255,255,255,.86);
+    .subhead{
+      margin:12px auto 0;
+      max-width:700px;
+      font-size:18px;
+      line-height:1.6;
+      opacity:.95;
     }
 
-    /* ===== FOOTER ===== */
-    footer{
-      border-top:1px solid var(--line);
-      background: rgba(251,247,240,.6);
-    }
-    .footer-inner{
+    main{
       max-width:1100px;
       margin:0 auto;
-      padding:18px 20px;
+      padding:36px 20px 60px;
+    }
+
+    .intro-card,
+    .layers-card{
+      background:rgba(255,255,255,0.72);
+      backdrop-filter:blur(6px);
+      border:1px solid rgba(122,106,79,0.12);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      margin-bottom:26px;
+    }
+
+    h2{
+      margin:0 0 14px;
+      color:var(--brand);
+      font-size:34px;
+    }
+
+    h3{
+      margin:0 0 10px;
+      color:var(--brand-dark);
+      font-size:24px;
+    }
+
+    p{
+      line-height:1.7;
+      margin:0 0 12px;
+    }
+
+    .layers-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .layer-pill{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      box-shadow:0 4px 14px rgba(66,47,28,0.06);
+    }
+
+    .layer-pill strong{
+      display:block;
+      color:var(--brand-dark);
+      margin-bottom:6px;
+      font-size:18px;
+    }
+
+    .section-head{
       display:flex;
       justify-content:space-between;
-      gap:12px;
+      align-items:end;
+      gap:16px;
+      margin:34px 0 18px;
+      flex-wrap:wrap;
+    }
+
+    .section-head p{
       color:var(--muted);
-      font-size:13px;
+      margin:0;
+      max-width:700px;
     }
 
-    /* ===== MOBILE ===== */
-    @media (max-width: 900px){
-      .card{grid-column: span 12;}
-      .links{gap:14px;font-size:13px;}
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
     }
-  /* ===== SPORTNDUCK SIGNATURE FOOTER ===== */
-.sd-footer{
-  margin-top: 40px;
-  border-top: 1px solid rgba(122,106,79,.22);
-  background: rgba(255,255,255,.35);
-  backdrop-filter: blur(8px);
-}
-.sd-footer-inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 26px 20px 30px;
-  text-align: center;
-}
-.sd-wordmark{
-  font-family: "Times New Roman", Georgia, serif;
-  letter-spacing: .22em;
-  font-size: 12px;
-  color: rgba(44,42,38,.75);
-}
-.sd-tagline{
-  margin-top: 8px;
-  font-family: "Times New Roman", Georgia, serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #3a372f;
-}
-.sd-links{
-  margin: 14px 0 10px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.sd-links a{
-  font-size: 13px;
-  color: rgba(91,85,76,.92);
-  padding: 8px 10px;
-  border-radius: 999px;
-  transition: .18s ease;
-}
-.sd-links a:hover{
-  background: rgba(122,106,79,.10);
-  color: #2c2a26;
-}
-.sd-fine{
-  margin-top: 10px;
-  font-size: 12px;
-  color: rgba(91,85,76,.85);
-  line-height: 1.5;
-}
-    
-/* CONTACT CENTER FIX */
-#contact{
-  padding: 55px 20px;
-  text-align: center;
-}
 
-#contact .contact-inner{
-  max-width: 720px;
-  margin: 0 auto;
-}
+    .ingredient-card{
+      background:linear-gradient(180deg, #fffdf9 0%, #fbf6ef 100%);
+      border:1px solid var(--line);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
 
-#contact p{
-  margin-left: auto;
-  margin-right: auto;
-}
+    .ingredient-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 14px 28px rgba(66,47,28,0.13);
+    }
 
+    .ingredient-top{
+      padding:18px 18px 12px;
+    }
 
-    </style>  
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:white;
+      background:var(--brand);
+      border-radius:999px;
+      padding:7px 10px;
+      margin-bottom:12px;
+    }
+
+    .ingredient-title{
+      font-size:26px;
+      color:var(--brand-dark);
+      margin:0 0 8px;
+    }
+
+    .ingredient-summary{
+      color:var(--muted);
+      line-height:1.6;
+      min-height:72px;
+    }
+
+    .ingredient-toggle{
+      width:100%;
+      border:none;
+      background:transparent;
+      border-top:1px solid var(--line);
+      padding:14px 18px;
+      text-align:left;
+      font-family:inherit;
+      font-size:17px;
+      color:var(--brand-dark);
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .ingredient-toggle:hover{
+      background:rgba(122,106,79,0.05);
+    }
+
+    .ingredient-details{
+      display:none;
+      border-top:1px solid var(--line);
+      padding:18px;
+      background:#fffaf4;
+    }
+
+    .ingredient-card.open .ingredient-details{
+      display:block;
+    }
+
+    .ingredient-card.open .chevron{
+      transform:rotate(180deg);
+    }
+
+    .chevron{
+      transition:transform .2s ease;
+      font-size:18px;
+    }
+
+    .detail-block{
+      margin-bottom:14px;
+    }
+
+    .detail-block:last-child{
+      margin-bottom:0;
+    }
+
+    .detail-label{
+      font-weight:bold;
+      color:var(--brand-dark);
+      margin-bottom:6px;
+      display:block;
+    }
+
+    ul{
+      margin:8px 0 0 18px;
+      padding:0;
+    }
+
+    li{
+      margin-bottom:8px;
+      line-height:1.6;
+    }
+
+    .footer-note{
+      margin-top:30px;
+      color:var(--muted);
+      font-size:15px;
+      text-align:center;
+    }
+
+    @media (max-width:700px){
+      h1{font-size:34px}
+      h2{font-size:28px}
+      .ingredient-title{font-size:22px}
+      header{padding:46px 18px 34px}
+      main{padding:24px 16px 48px}
+    }
+  </style>
 </head>
 <body>
-  <!-- TOP NAV -->
-  <header class="topbar">
-    <div class="nav">
-      <div class="brand">
-        <span>Sportnduck</span>
-        <strong>Lifestyle Boutique</strong>
-      </div>
-      <nav class="links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#services">Services</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <div class="eyebrow">Sportnduck Lifestyle Boutique</div>
+    <h1>Skin Science Guide</h1>
+    <p class="subhead">
+      A warm, elevated ingredient explorer designed to help clients understand what each ingredient does,
+      where it works, and how it supports healthy-looking skin.
+    </p>
   </header>
 
-  <!-- HERO -->
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">Concierge • Wellness • Education-First</p>
-      <h1>Curated Style. Intentional Wellness.</h1>
-      <p class="hero-text">
-        Concierge lifestyle guidance blending wellness, beauty, and elevated everyday living.
-        Thoughtful recommendations. Simple routines. Luxury made approachable.
+  <main>
+    <section class="intro-card">
+      <h2>Luxury Ingredient Explorer</h2>
+      <p>
+        Tap each card below to reveal a simple explanation, ideal placement in a routine,
+        and why the ingredient matters in skin science.
       </p>
-
-      <div class="sig-divider"></div>
     </section>
 
-    <!-- SERVICES -->
-    <<p class="contact-intro">Let’s make it easy.</p>
-
-<p class="contact-sub">
-  Text or email to start your concierge request — we’ll reply with next steps and a simple plan.
-</p>
-
-<div class="contact-methods">
-  <p>Text: <a href="sms:19082161661">908-216-1661</a></p>
-  <p>Email: <a href="mailto:becauseyoucan@sportnduck.com">becauseyoucan@sportnduck.com</a></p>
-</div>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Capsule + Closet Edit</h3>
-          <p>Streamline what you own, refine your essentials, and build outfits that feel effortless.</p>
-        </article>
-
-        <article class="card">
-          <h3>Concierge Shopping</h3>
-          <p>Personalized picks across fashion, beauty, and home — curated for your lifestyle and budget.</p>
-        </article>
-
-        <article class="card">
-          <h3>Wellness Routine Reset</h3>
-          <p>Simple morning + evening rituals, product guidance, and an easy rhythm that supports you.</p>
-        </article>
-
-        <article class="card">
-          <h3>Beauty Education</h3>
-          <p>Ingredient education, safe layering help, and a plan designed for your goals and skin needs.</p>
-        </article>
+    <section class="layers-card">
+      <h3>Skin Layers at a Glance</h3>
+      <div class="layers-list">
+        <div class="layer-pill">
+          <strong>Epidermis</strong>
+          Surface protection, moisture balance, and barrier defense.
+        </div>
+        <div class="layer-pill">
+          <strong>Dermis</strong>
+          Collagen, elastin, structure, and visible skin resilience.
+        </div>
+        <div class="layer-pill">
+          <strong>Hypodermis</strong>
+          Cushioning, support, and deeper tissue insulation.
+        </div>
       </div>
     </section>
 
-    <!-- RESOURCES (placeholder so your nav works) -->
-    <section class="section" id="resources">
-  <h2 class="section-title">Resources</h2>
+    <div class="section-head">
+      <h2>Featured Ingredients</h2>
+      <p>Open each card to explore benefits, skin layer relevance, and routine notes.</p>
+    </div>
 
-  <p class="section-sub">
-     Curated favorites.
-  </p>
+    <section class="card-grid">
+      <article class="ingredient-card">
+        <div class="ingredient-top">
+          <span class="tag">Barrier Repair</span>
+          <h3 class="ingredient-title">Ceramides</h3>
+          <p class="ingredient-summary">
+            Essential lipids that help strengthen the skin barrier and reduce moisture loss.
+          </p>
+        </div>
+        <button class="ingredient-toggle" type="button">
+          Explore ingredient
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="ingredient-details">
+          <div class="detail-block">
+            <span class="detail-label">Why it matters</span>
+            Ceramides help reinforce the outer layer of skin, making them especially helpful for dryness, sensitivity, and barrier disruption.
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Best skin layer match</span>
+            Epidermis
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Routine placement</span>
+            Often used after serums and before or within moisturizer.
+          </div>
+        </div>
+      </article>
 
-  <div class="resource-links">
+      <article class="ingredient-card">
+        <div class="ingredient-top">
+          <span class="tag">Collagen Support</span>
+          <h3 class="ingredient-title">Peptides</h3>
+          <p class="ingredient-summary">
+            Signal-style ingredients that support skin firmness and a smoother appearance.
+          </p>
+        </div>
+        <button class="ingredient-toggle" type="button">
+          Explore ingredient
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="ingredient-details">
+          <div class="detail-block">
+            <span class="detail-label">Why it matters</span>
+            Peptides are often used to support a firmer, more resilient look by helping skin communicate more effectively.
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Best skin layer match</span>
+            Dermis-focused support
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Routine placement</span>
+            Usually applied after cleansing and before heavier creams.
+          </div>
+        </div>
+      </article>
 
-    <p>
-      <a href="https://example.com" target="_blank">
-        Ingredient Education Library
-      </a>
+      <article class="ingredient-card">
+        <div class="ingredient-top">
+          <span class="tag">Hydration</span>
+          <h3 class="ingredient-title">Hyaluronic Acid</h3>
+          <p class="ingredient-summary">
+            A moisture-attracting ingredient that helps skin feel plumper and more hydrated.
+          </p>
+        </div>
+        <button class="ingredient-toggle" type="button">
+          Explore ingredient
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="ingredient-details">
+          <div class="detail-block">
+            <span class="detail-label">Why it matters</span>
+            Helps pull water into the upper layers of the skin, improving hydration and softness.
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Best skin layer match</span>
+            Epidermis
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Routine placement</span>
+            Best on slightly damp skin before moisturizer.
+          </div>
+        </div>
+      </article>
+
+      <article class="ingredient-card">
+        <div class="ingredient-top">
+          <span class="tag">Renewal</span>
+          <h3 class="ingredient-title">Retinol</h3>
+          <p class="ingredient-summary">
+            A vitamin A derivative often used to support smoother-looking, more refined skin.
+          </p>
+        </div>
+        <button class="ingredient-toggle" type="button">
+          Explore ingredient
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="ingredient-details">
+          <div class="detail-block">
+            <span class="detail-label">Why it matters</span>
+            Retinol supports skin renewal and can help improve the appearance of uneven texture over time.
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Best skin layer match</span>
+            Epidermis with deeper visible benefits
+          </div>
+          <div class="detail-block">
+            <span class="detail-label">Routine placement</span>
+            Usually at night, followed by moisturizer.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <p class="footer-note">
+      Sportnduck Skin Science Guide · first interactive luxury ingredient edition
     </p>
-
-    <p>
-      <a href="https://example.com" target="_blank">
-        Wellness & Lifestyle Inspiration
-      </a>
-    </p>
-
-  </div>
-
-</section>
-
-    <!-- CONTACT (placeholder so your nav works) -->
-  
-
-
-<section id="contact">
-  <div class="contact-inner">
-  <h2>Contact</h2>
-
-  <p class="contact-intro">Let’s make it easy.</p>
-
-<p class="contact-sub">
-  Text or email to start your concierge request — we’ll reply with next steps and a simple plan.
-</p>
-
-<div class="contact-methods">
-  <p>Text: <a href="sms:19082161661">908-216-1661</a></p>
-  <p>Email: <a href="mailto:becauseyoucan@sportnduck.com">becauseyoucan@sportnduck.com</a></p>
-</div>
-</section>
-  </div>
-
-</section>   
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div>© <span id="y"></span> Sportnduck</div>
-      <div>Curated calm, daily.</div>
-    </div>
-  </footer>
-
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const cards = document.querySelectorAll('.ingredient-card');
+
+    cards.forEach(card => {
+      const button = card.querySelector('.ingredient-toggle');
+      button.addEventListener('click', () => {
+        card.classList.toggle('open');
+      });
+    });
   </script>
-<footer class="sd-footer" id="footer">
-  <div class="sd-footer-inner">
-    <div class="sd-mark">
-      <div class="sd-wordmark">SPORTNDUCK</div>
-      <div <p class="footer-tagline">Live beautifully. Simply.</p>
-    </div>
-
-    <div class="sd-links">
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#top">Back to top</a>
-    </div>
-
-    <div class="sd-fine">
-      © <span id="sd-year"></span> Sportnduck Lifestyle Boutique • Appointment-only concierge services
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('sd-year').textContent = new Date().getFullYear();
-</script>
-
-
-    <!-- ===== SPORTNDUCK SIGNATURE FOOTER ===== -->
-<footer class="sd-footer">
-  <div class="sd-footer-inner">
-
-    <div class="sd-wordmark">
-     
 </body>
 </html>
