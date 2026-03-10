@@ -609,6 +609,222 @@ together with skincare to support long-term skin vitality.
 </div>
 
 </div>
+  <h2 style="margin-top:70px;color:#7A6A4F;font-size:28px;text-align:center;">
+The 4 Pillars of Skin Longevity
+</h2>
+
+<p style="text-align:center;max-width:720px;margin:20px auto 50px;">
+Healthy skin is supported by consistent daily habits and thoughtful long-term care. 
+These four pillars work together to maintain collagen structure, barrier strength, 
+and overall skin vitality.
+</p>
+
+<div style="max-width:900px;margin:40px auto 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+
+<div style="background:white;border-radius:14px;padding:26px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+<h3 style="margin-top:0;color:#7A6A4F;">1. Sun Protection</h3>
+<p>
+Daily SPF helps protect collagen fibers and prevents UV damage that accelerates
+skin aging. Consistent sun protection is one of the most important long-term
+investments for healthy skin.
+</p>
+</div>
+
+<div style="background:white;border-radius:14px;padding:26px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+<h3 style="margin-top:0;color:#7A6A4F;">2. Barrier Health</h3>
+<p>
+A strong skin barrier helps retain moisture and protects against environmental
+stress. Ingredients such as ceramides, peptides, and gentle hydration support
+this protective layer.
+</p>
+</div>
+
+<div style="background:white;border-radius:14px;padding:26px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+<h3 style="margin-top:0;color:#7A6A4F;">3. Collagen Support</h3>
+<p>
+Collagen structure can be supported with ingredients and treatments such as
+retinol, peptides, microneedling, and red LED therapy. These approaches help
+encourage skin renewal and firmness.
+</p>
+</div>
+
+<div style="background:white;border-radius:14px;padding:26px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+<h3 style="margin-top:0;color:#7A6A4F;">4. Lifestyle Foundations</h3>
+<p>
+Sleep, nutrition, movement, and stress management support circulation,
+cell repair, and overall skin resilience. Healthy lifestyle habits work
+together with skincare to support long-term skin vitality.
+</p>
+</div>
+
+</div>
+  <h2 style="margin-top:70px;color:#7A6A4F;font-size:28px;text-align:center;">
+Build a Simple Skin Routine
+</h2>
+
+<p style="text-align:center;max-width:720px;margin:20px auto 40px;">
+Choose your skin goal, skin type, and age range to see a simple educational routine framework.
+</p>
+
+<div style="max-width:900px;margin:40px auto 30px;background:white;border-radius:14px;padding:28px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+    
+    <div>
+      <label for="skinGoal" style="display:block;margin-bottom:8px;font-weight:bold;color:#7A6A4F;">Skin Goal</label>
+      <select id="skinGoal" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
+        <option value="glow">Glow & Brightening</option>
+        <option value="aging">Healthy Aging Support</option>
+        <option value="hydration">Hydration & Barrier Support</option>
+        <option value="acne">Blemish Support</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="skinType" style="display:block;margin-bottom:8px;font-weight:bold;color:#7A6A4F;">Skin Type</label>
+      <select id="skinType" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
+        <option value="normal">Normal</option>
+        <option value="dry">Dry</option>
+        <option value="oily">Oily</option>
+        <option value="combination">Combination</option>
+        <option value="sensitive">Sensitive</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="ageRange" style="display:block;margin-bottom:8px;font-weight:bold;color:#7A6A4F;">Age Range</label>
+      <select id="ageRange" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
+        <option value="20s">20s</option>
+        <option value="30s">30s</option>
+        <option value="40s">40s</option>
+        <option value="50plus">50+</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;">
+    <button onclick="buildRoutine()" style="background:#7A6A4F;color:white;border:none;padding:14px 26px;border-radius:8px;font-size:16px;cursor:pointer;">
+      Show Routine
+    </button>
+  </div>
+</div>
+
+<div id="routineResult" style="max-width:900px;margin:20px auto 80px;display:none;background:#fff;border-radius:14px;padding:28px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+  <h3 style="margin-top:0;color:#7A6A4F;font-size:24px;">Your Suggested Educational Routine</h3>
+  <div id="routineText" style="line-height:1.8;color:#5f564c;"></div>
+</div>
+
+<script>
+function buildRoutine() {
+  const goal = document.getElementById("skinGoal").value;
+  const type = document.getElementById("skinType").value;
+  const age = document.getElementById("ageRange").value;
+  const result = document.getElementById("routineResult");
+  const routineText = document.getElementById("routineText");
+
+  let morning = [];
+  let evening = [];
+  let notes = [];
+
+  morning.push("Gentle Cleanser");
+  morning.push("SPF every day, indoors and outdoors");
+
+  evening.push("Gentle Cleanser");
+  evening.push("Moisturizer");
+
+  if (goal === "glow") {
+    morning.splice(1, 0, "Vitamin C");
+    morning.splice(2, 0, "Hyaluronic Acid");
+    evening.splice(1, 0, "Peptides");
+    notes.push("Brightening routines often focus on Vitamin C in the morning and barrier support at night.");
+  }
+
+  if (goal === "aging") {
+    morning.splice(1, 0, "Vitamin C");
+    evening.splice(1, 0, "Peptides");
+    evening.splice(2, 0, "Retinol");
+    notes.push("Healthy aging support often combines SPF, antioxidants, peptides, and retinol.");
+  }
+
+  if (goal === "hydration") {
+    morning.splice(1, 0, "Hyaluronic Acid");
+    morning.splice(2, 0, "Ceramide Moisturizer");
+    evening.splice(1, 0, "Hyaluronic Acid");
+    evening.splice(2, 0, "Ceramides");
+    notes.push("Hydration and barrier support often rely on humectants plus barrier-repair ingredients.");
+  }
+
+  if (goal === "acne") {
+    morning.splice(1, 0, "Lightweight Hydration");
+    evening.splice(1, 0, "Retinol or blemish-support treatment");
+    notes.push("Blemish-support routines often stay simple to avoid over-irritation.");
+  }
+
+  if (type === "dry") {
+    notes.push("Dry skin usually benefits from richer moisturizers, ceramides, and gentle cleansing.");
+  }
+
+  if (type === "oily") {
+    notes.push("Oily skin often benefits from lightweight hydration rather than skipping moisturizer.");
+  }
+
+  if (type === "sensitive") {
+    notes.push("Sensitive skin usually does best with slower ingredient introduction and fewer active layers.");
+  }
+
+  if (type === "combination") {
+    notes.push("Combination skin may need balancing hydration with lighter textures in oil-prone areas.");
+  }
+
+  if (age === "20s") {
+    notes.push("In your 20s, the focus is often prevention: SPF, hydration, and gentle antioxidant support.");
+  }
+
+  if (age === "30s") {
+    notes.push("In your 30s, collagen support and consistent barrier care become more important.");
+  }
+
+  if (age === "40s") {
+    notes.push("In your 40s, routines often emphasize collagen support, hydration, and skin structure.");
+  }
+
+  if (age === "50plus") {
+    notes.push("At 50+, barrier support, consistent moisture, SPF, and collagen-focused care are especially important.");
+  }
+
+  routineText.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div style="background:#f8f4ef;border-radius:12px;padding:20px;">
+        <h4 style="margin-top:0;color:#7A6A4F;">Morning</h4>
+        <ul style="padding-left:20px;margin:0;">
+          ${morning.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
+
+      <div style="background:#f8f4ef;border-radius:12px;padding:20px;">
+        <h4 style="margin-top:0;color:#7A6A4F;">Evening</h4>
+        <ul style="padding-left:20px;margin:0;">
+          ${evening.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;">
+      <h4 style="color:#7A6A4F;margin-bottom:10px;">Helpful Notes</h4>
+      <ul style="padding-left:20px;">
+        ${notes.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </div>
+
+    <p style="margin-top:20px;font-size:15px;color:#777;">
+      This routine builder is educational and not medical advice. Individual skin needs, sensitivities, and professional guidance should always be considered.
+    </p>
+  `;
+
+  result.style.display = "block";
+}
+</script>
 </main>
 </body>
 </html>
