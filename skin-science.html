@@ -967,7 +967,31 @@ Sportnduck does not provide medical services and does not claim to diagnose, tre
 Individual results may vary depending on age, genetics, lifestyle, and environmental factors.
 </p>
 </div>
+<script>
+function showLayer(layer) {
 
+let text = "";
+
+if(layer === "epidermis"){
+text = "<strong>Epidermis:</strong> Retinol supports cellular turnover and renewal in the outer skin layer.";
+}
+
+if(layer === "dermis"){
+text = "<strong>Dermis:</strong> Peptides help signal collagen production in the structural layer of skin.";
+}
+
+if(layer === "barrier"){
+text = "<strong>Skin Barrier:</strong> Ceramides strengthen the lipid barrier and help maintain hydration.";
+}
+
+if(layer === "technology"){
+text = "<strong>Dermal Support:</strong> LED therapy uses wavelengths that influence deeper skin tissue activity.";
+}
+
+document.getElementById("layerResult").innerHTML = text;
+
+}
+</script>
 </main>
 </main>
   
