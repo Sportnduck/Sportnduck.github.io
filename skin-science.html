@@ -931,7 +931,23 @@ Skin changes gradually across the decades as collagen, elastin, hydration, and s
 
 </div>
   <div style="margin-top:50px;padding:20px;background:#f7f5f2;border-radius:12px;border:1px solid #e6e1d9;">
-<h3 style="color:#7A6A4F;margin-top:0;font-weight:700;">Educational & Medical Disclaimer</h3>
+    <h2 style="margin-top:40px;color:#7A6A4F;">Interactive Skin Science</h2>
+
+<p style="color:#5f564c;line-height:1.7;">
+Select an ingredient or technology to see which layer of the skin it primarily influences.
+</p>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:15px;">
+<button onclick="showLayer('epidermis')" style="padding:10px 16px;border-radius:8px;border:none;background:#7A6A4F;color:white;">Retinol</button>
+<button onclick="showLayer('dermis')" style="padding:10px 16px;border-radius:8px;border:none;background:#7A6A4F;color:white;">Peptides</button>
+<button onclick="showLayer('barrier')" style="padding:10px 16px;border-radius:8px;border:none;background:#7A6A4F;color:white;">Ceramides</button>
+<button onclick="showLayer('technology')" style="padding:10px 16px;border-radius:8px;border:none;background:#7A6A4F;color:white;">LED Light</button>
+</div>
+
+<div id="layerResult" style="margin-top:20px;padding:18px;background:#f7f5f2;border-radius:12px;color:#5f564c;">
+Select an ingredient above to learn where it works in the skin.
+</div>
+<h3 style="color:#7A6A4F;margin-top:0;">Educational & Medical Disclaimer</h3>
 
 <p style="line-height:1.7;color:#5f564c;">
 The information provided in the Sportnduck Skin Science Guide is intended for educational and informational purposes only.
