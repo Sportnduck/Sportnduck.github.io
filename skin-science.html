@@ -702,17 +702,26 @@ Choose your skin goal, skin type, and age range to see a simple educational rout
     </div>
 
   </div>
+<div style="display:flex;gap:14px;justify-content:center;margin-top:24px;flex-wrap:wrap;">
 
-  <div style="text-align:center;margin-top:24px;">
-    <button onclick="buildRoutine()" style="background:#7A6A4F;color:white;border:none;padding:14px 26px;border-radius:8px;font-size:16px;cursor:pointer;">
-      Show Routine
-    </button>
-  </div>
+<button onclick="buildRoutine()" style="background:#7A6A4F;color:white;border:none;padding:14px 28px;border-radius:10px;font-size:16px;cursor:pointer;">
+Show Routine
+</button>
+
+<button onclick="resetRoutine()" style="background:#f3eee6;color:#7A6A4F;border:none;padding:14px 28px;border-radius:10px;font-size:16px;cursor:pointer;">
+Start Over
+</button>
+
+</div>
 </div>
 
 <div id="routineResult" style="max-width:900px;margin:20px auto 80px;display:none;background:#fff;border-radius:14px;padding:28px;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
   <h3 style="margin-top:0;color:#7A6A4F;font-size:24px;">Your Suggested Educational Routine</h3>
-  <div id="routineText" style="line-height:1.8;color:#5f564c;"></div>
+  <h3 style="color:#7A6A4F;margin-top:30px;">
+Suggested Routine
+</h3>
+
+<div id="routineText" style="line-height:1.8;color:#5f564c;">
 </div>
 
 <script>
