@@ -1,0 +1,57 @@
+<h1 style="text-align:center;color:#7A6A4F;margin-top:60px;">
+Build Your Custom Routine
+</h1>
+
+<p style="text-align:center;max-width:600px;margin:10px auto 50px;">
+Choose your skin goal, skin type, and age range to reveal a thoughtful skincare routine.
+</p>
+
+<div style="display:flex;justify-content:center;margin-top:60px;">
+
+<div style="background:#f6f4ef;padding:30px;border-radius:12px;width:320px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);">
+
+<h3 style="text-align:center;color:#7A6A4F;margin-bottom:20px;">
+Customize Your Routine
+</h3>
+
+<label style="font-weight:600;">Skin Goal</label>
+<select id="goal" style="width:100%;padding:10px;margin-top:6px;margin-bottom:15px;border-radius:6px;border:1px solid #ccc;">
+<option>Glow & Brightening</option>
+<option>Hydration</option>
+<option>Acne Support</option>
+<option>Firmness</option>
+<option>Calming & Repair</option>
+</select>
+
+<label style="font-weight:600;">Skin Type</label>
+<select id="type" style="width:100%;padding:10px;margin-top:6px;margin-bottom:15px;border-radius:6px;border:1px solid #ccc;">
+<option>Normal</option>
+<option>Dry</option>
+<option>Oily</option>
+<option>Combination</option>
+<option>Sensitive</option>
+</select>
+
+<label style="font-weight:600;">Age Range</label>
+<select id="age" style="width:100%;padding:10px;margin-top:6px;margin-bottom:20px;border-radius:6px;border:1px solid #ccc;">
+<option>20s</option>
+<option>30s</option>
+<option>40s</option>
+<option>50+</option>
+</select>
+
+<button onclick="showRoutine()" 
+style="width:100%;background:#7A6A4F;color:white;padding:12px;border:none;border-radius:8px;font-weight:600;">
+Reveal My Routine
+</button>
+
+<button onclick="location.reload()" 
+style="width:100%;margin-top:10px;background:#e5e2d9;color:#333;padding:10px;border:none;border-radius:8px;">
+Start Over
+</button>
+
+</div>
+</div>
+
+<div id="routineResult" style="max-width:600px;margin:40px auto;text-align:center;"></div>
