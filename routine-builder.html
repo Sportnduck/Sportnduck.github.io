@@ -97,6 +97,7 @@ function showRoutine() {
   let evening = "Cleanser • Treatment Serum • Moisturizer";
   let ingredients = "";
   let notes = "";
+  let led = "";
 
   if (goal === "Glow & Brightening") {
     ingredients = "Vitamin C • Niacinamide • Gentle Exfoliation";
@@ -119,36 +120,42 @@ function showRoutine() {
     evening = "Gentle Cleanser • Barrier-Support Serum • Moisturizer";
     ingredients = "Niacinamide • Azelaic Acid • Ceramides";
     notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
+    led = "Yellow LED light may help support calming and redness reduction.";
   }
   if (concern === "Melasma") {
     morning = "Gentle Cleanser • Brightening Serum • Moisturizer • Broad-Spectrum Sunscreen";
     evening = "Cleanser • Pigment-Support Treatment • Moisturizer";
     ingredients = "Vitamin C • Tranexamic Acid • Niacinamide";
     notes = "Consistency and daily sun protection are essential for melasma-prone skin.";
+    led = "Green LED light may help support a more even-looking skin tone.";
   }
   if (concern === "Sensitive Skin") {
     morning = "Gentle Cleanser • Hydrating Serum • Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Niacinamide or Ceramide Support • Moisturizer";
     ingredients = "Ceramides • Niacinamide • Panthenol";
     notes = "Choose fragrance-free, barrier-friendly formulas and introduce actives slowly.";
+    led = "Yellow LED light may help support calming and redness reduction.";
   }
   if (concern === "Acne-Prone") {
     morning = "Gentle Cleanser • Niacinamide Serum • Lightweight Moisturizer • Sunscreen";
     evening = "Cleanser • Clarifying Treatment • Moisturizer";
     ingredients = "Niacinamide • Salicylic Support • Oil Balance";
     notes = "Look for balancing ingredients and avoid overly harsh stripping routines.";
+    led = "Blue LED light may help support clearer-looking skin.";
   }
   if (concern === "Hyperpigmentation") {
     morning = "Gentle Cleanser • Vitamin C or Brightening Serum • Moisturizer • Sunscreen";
     evening = "Cleanser • Tone-Evening Treatment • Moisturizer";
     ingredients = "Vitamin C • Niacinamide • Brightening Support";
     notes = "Brightening ingredients and sun protection help support a more even skin tone.";
+    led = "Green LED light may help support a more even-looking skin tone.";
   }
   if (concern === "Barrier Damage") {
     morning = "Gentle Cleanser • Hydrating Serum • Ceramide-Rich Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Barrier Repair Serum • Rich Moisturizer";
     ingredients = "Ceramides • Hyaluronic Acid • Barrier Repair Support";
     notes = "Pause aggressive exfoliation and focus on hydration and repair.";
+    led = "Red LED light may help support skin repair and collagen activity.";
   }
 
   let routine = `
@@ -169,6 +176,7 @@ function showRoutine() {
       <p>${evening}</p>
 
       ${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
+      ${led ? `<p style="margin-top:10px;font-size:14px;"><b>LED Therapy Suggestion:</b> ${led}</p>` : ""}
     </div>
 
     <p style="margin-top:20px;font-size:14px;color:#666;text-align:center;">
