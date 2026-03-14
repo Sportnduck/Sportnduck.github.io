@@ -120,8 +120,9 @@ function showRoutine() {
     evening = "Gentle Cleanser • Barrier-Support Serum • Moisturizer";
     ingredients = "Niacinamide • Azelaic Acid • Ceramides";
     notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
-    led = "Yellow LED light may help support calming and redness reduction.";
+    led = "Yellow LED light may help support redness and sensitive skin.";
   }
+
   if (concern === "Melasma") {
     morning = "Gentle Cleanser • Brightening Serum • Moisturizer • Broad-Spectrum Sunscreen";
     evening = "Cleanser • Pigment-Support Treatment • Moisturizer";
@@ -129,20 +130,23 @@ function showRoutine() {
     notes = "Consistency and daily sun protection are essential for melasma-prone skin.";
     led = "Green LED light may help support a more even-looking skin tone.";
   }
+
   if (concern === "Sensitive Skin") {
     morning = "Gentle Cleanser • Hydrating Serum • Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Niacinamide or Ceramide Support • Moisturizer";
     ingredients = "Ceramides • Niacinamide • Panthenol";
     notes = "Choose fragrance-free, barrier-friendly formulas and introduce actives slowly.";
-    led = "Yellow LED light may help support calming and redness reduction.";
+    led = "Yellow LED light may help support redness and sensitive skin.";
   }
+
   if (concern === "Acne-Prone") {
     morning = "Gentle Cleanser • Niacinamide Serum • Lightweight Moisturizer • Sunscreen";
     evening = "Cleanser • Clarifying Treatment • Moisturizer";
     ingredients = "Niacinamide • Salicylic Support • Oil Balance";
     notes = "Look for balancing ingredients and avoid overly harsh stripping routines.";
-    led = "Blue LED light may help support clearer-looking skin.";
+    led = "Blue LED light may help support acne-prone skin.";
   }
+
   if (concern === "Hyperpigmentation") {
     morning = "Gentle Cleanser • Vitamin C or Brightening Serum • Moisturizer • Sunscreen";
     evening = "Cleanser • Tone-Evening Treatment • Moisturizer";
@@ -150,6 +154,7 @@ function showRoutine() {
     notes = "Brightening ingredients and sun protection help support a more even skin tone.";
     led = "Green LED light may help support a more even-looking skin tone.";
   }
+
   if (concern === "Barrier Damage") {
     morning = "Gentle Cleanser • Hydrating Serum • Ceramide-Rich Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Barrier Repair Serum • Rich Moisturizer";
@@ -158,53 +163,63 @@ function showRoutine() {
     led = "Red LED light may help support skin repair and collagen activity.";
   }
 
-  let routine = `
-  <div style="max-width:650px;margin:40px auto;background:#ffffff;padding:30px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
-    <h2 style="color:#7A6A4F;margin-bottom:20px;text-align:center;">Your Personalized Routine</h2>
+ let routine = `
+<div style="max-width:650px;margin:40px auto;background:#ffffff;padding:30px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
 
-    <p><b>Skin Goal:</b> ${goal}</p>
-    <p><b>Skin Type:</b> ${type}</p>
-    <p><b>Age Range:</b> ${age}</p>
-    <p><b>Skin Concern:</b> ${concern}</p>
-    <p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
+<h2 style="color:#7A6A4F;margin-bottom:20px;text-align:center;">Your Personalized Routine</h2>
 
-    <div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
-      <p style="font-weight:600;margin-bottom:5px;">Morning Routine</p>
-      <p>${morning}</p>
+<p><b>Skin Goal:</b> ${goal}</p>
+<p><b>Skin Type:</b> ${type}</p>
+<p><b>Age Range:</b> ${age}</p>
+<p><b>Skin Concern:</b> ${concern}</p>
 
-      <p style="font-weight:600;margin-top:15px;margin-bottom:5px;">Evening Routine</p>
-      <p>${evening}</p>
+<p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
 
-      ${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
-      ${led ? `<p style="margin-top:10px;font-size:14px;"><b>LED Therapy Suggestion:</b> ${led}</p>` : ""}
-    </div>
+<div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
 
-    <p style="margin-top:20px;font-size:14px;color:#666;text-align:center;">
-      Skincare is personal. This routine is a thoughtful starting point based on your selections.
-    </p>
+<p style="font-weight:600;margin-bottom:5px;">Morning Routine</p>
+<p>${morning}</p>
 
-    <p style="margin-top:15px;text-align:center;">
-      <a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
-        Refine your routine with our personal shopping experience →
-        
-      </a>
-    </p>
-    <p style="text-align:center;margin-top:15px;">
-<button onclick="saveRoutine()" style="background:#7A6A4F;color:white;border:none;padding:12px 22px;border-radius:8px;font-size:14px;cursor:pointer;">
+<p style="font-weight:600;margin-top:15px;margin-bottom:5px;">Evening Routine</p>
+<p>${evening}</p>
+
+${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
+
+${led ? `<p style="margin-top:10px;font-size:14px;"><b>LED Therapy Suggestion:</b> ${led}</p>` : ""}
+
+</div>
+
+<p style="margin-top:20px;font-size:14px;color:#666;text-align:center;">
+Skincare is personal. This routine is a thoughtful starting point based on your selections.
+</p>
+
+<p style="margin-top:15px;text-align:center;">
+<a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
+Refine your routine with our personal shopping experience →
+</a>
+</p>
+
+<p style="text-align:center;margin-top:15px;">
+<button onclick="saveRoutine()" style="background:#7A6A4F;color:white;border:none;padding:12px 22px;border-radius:8px;">
 Save My Routine
 </button>
 </p>
+
 <p style="text-align:center;margin-top:10px;">
-<button onclick="emailRoutine()" style="background:#A89573;color:white;border:none;padding:12px 22px;border-radius:8px;font-size:14px;cursor:pointer;">
+<button onclick="emailRoutine()" style="background:#A89573;color:white;border:none;padding:12px 22px;border-radius:8px;">
 Email My Routine
 </button>
 </p>
 
-  </div>
-  `;
+</div>
+`;
+  `
 
   document.getElementById("routineResult").innerHTML = routine;
 }
+  `;
+
+
  function saveRoutine() {
 
 let routineText = document.getElementById("routineResult").innerText;
@@ -230,3 +245,4 @@ window.location.href =
 "mailto:?subject=" + subject + "&body=" + body;
 
 }
+</script>
