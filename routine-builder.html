@@ -84,6 +84,7 @@ function showRoutine() {
  let notes = "";
 let led = "";
 let ledUse = "";
+  let focus = "";
 
   if (goal === "Glow & Brightening") {
     ingredients = "Vitamin C • Niacinamide • Gentle Exfoliation";
@@ -108,6 +109,7 @@ let ledUse = "";
     notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
 led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     ledUse = "Use 3–4 times per week for short sessions, watching carefully for sensitivity.";
+  focus = "Calm inflammation and strengthen the skin barrier.";
   }       
        
   if (concern === "Melasma") {
@@ -117,6 +119,7 @@ led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     notes = "Consistency and daily sun protection are essential for melasma-prone skin.";
     led = "Green LED light may help support a more even-looking skin tone. 🟢";
     ledUse = "Use consistently 3–4 times per week and pair with daily sunscreen.";
+    focus = "Support brighter, more even-looking skin tone.";
   }
 
   if (concern === "Sensitive Skin") {
@@ -126,6 +129,7 @@ led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     notes = "Choose fragrance-free, barrier-friendly formulas and introduce actives slowly.";
    led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     ledUse = "Start with 2–3 times per week and increase slowly if skin stays calm.";
+    focus = "Strengthen the barrier and reduce irritation.";
   }
 
   if (concern === "Acne-Prone") {
@@ -135,6 +139,7 @@ led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     notes = "Look for balancing ingredients and avoid overly harsh stripping routines.";
     led = "Blue LED light may help support acne-prone skin and reduce bacteria on the skin. 🔵";
     ledUse = "Use 3–5 times per week for short sessions on breakout-prone areas.";
+    focus = "Balance oil and support clearer looking skin.";
   }
 
   if (concern === "Hyperpigmentation") {
@@ -144,6 +149,7 @@ led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     notes = "Brightening ingredients and sun protection help support a more even skin tone.";
   led = "Green LED light may help support a more even-looking skin tone. 🟢";
     ledUse = "Use 3–4 times per week along with brightening ingredients and sunscreen.";
+    focus = "Support brighter, more even-looking skin tone.";
   }
 
   if (concern === "Barrier Damage") {
@@ -153,6 +159,7 @@ led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     notes = "Pause aggressive exfoliation and focus on hydration and repair.";
   led = "Red LED light may help support collagen production and improve the appearance of firmness. 🔴";
     ledUse = "Use gently 2–3 times per week while focusing on hydration and repair.";
+    focus = "Support brighter, more even-looking skin tone.";
   }
 let routine = `
 <div style="max-width:680px;margin:40px auto;background:#ffffff;padding:32px;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,0.08);text-align:left;">
