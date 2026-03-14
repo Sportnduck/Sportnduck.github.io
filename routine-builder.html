@@ -178,11 +178,27 @@ function showRoutine() {
     <p style="margin-top:15px;text-align:center;">
       <a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
         Refine your routine with our personal shopping experience →
+        
       </a>
     </p>
+    <p style="text-align:center;margin-top:15px;">
+<button onclick="saveRoutine()" style="background:#7A6A4F;color:white;border:none;padding:12px 22px;border-radius:8px;font-size:14px;cursor:pointer;">
+Save My Routine
+</button>
+</p>
   </div>
   `;
 
   document.getElementById("routineResult").innerHTML = routine;
+}
+  function saveRoutine() {
+  let routineText = document.getElementById("routineResult").innerText;
+
+  let blob = new Blob([routineText], { type: "text/plain" });
+
+  let link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "sportnduck-skincare-routine.txt";
+  link.click();
 }
 </script>
