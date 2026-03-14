@@ -78,8 +78,35 @@ Understanding ingredients, skin layers, and how thoughtful routines support heal
 <h3 style="color:#7A6A4F;">Retinol</h3>
 <p>Encourages cell turnover and helps improve skin texture.</p>
 </div>
-
 </div>
+
+<div id="routineResult" style="max-width:600px;margin:40px auto;text-align:center;"></div>
+
+<script>
+function showRoutine() {
+
+let goal = document.getElementById("goal").value;
+let type = document.getElementById("type").value;
+let age = document.getElementById("age").value;
+
+let routine = `
+<h2 style="color:#7A6A4F;">Your Suggested Routine</h2>
+
+<p><b>Skin Goal:</b> ${goal}</p>
+<p><b>Skin Type:</b> ${type}</p>
+<p><b>Age Range:</b> ${age}</p>
+
+<p style="margin-top:20px;"><b>Morning</b></p>
+<p>Gentle Cleanser • Vitamin C Serum • Moisturizer • Sunscreen</p>
+
+<p style="margin-top:10px;"><b>Evening</b></p>
+<p>Cleanser • Treatment Serum • Moisturizer</p>
+`;
+
+document.getElementById("routineResult").innerHTML = routine;
+
+}
+</script>
     <div style="margin:20px 0;">
 <a href="index.html" style="text-decoration:none;color:#7A6A4F;font-weight:600;">
 ← Back to Sportnduck Home
