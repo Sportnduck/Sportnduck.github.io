@@ -77,7 +77,6 @@ style="display:inline-block;color:#7A6A4F;text-decoration:none;font-weight:600;f
 
 <script>
 function showRoutine() {
-
   let goal = document.getElementById("goal").value;
   let type = document.getElementById("type").value;
   let age = document.getElementById("age").value;
@@ -150,29 +149,37 @@ function showRoutine() {
     notes = "Pause aggressive exfoliation and focus on hydration and repair.";
   }
 
-let routine = `
-<h2 style="color:#7A6A4F;margin-top:40px;">Your Personalized Routine</h2>
+  let routine = `
+    <h2 style="color:#7A6A4F;margin-top:40px;">Your Personalized Routine</h2>
 
-<p><b>Skin Goal:</b> ${goal}</p>
-<p><b>Skin Type:</b> ${type}</p>
-<p><b>Age Range:</b> ${age}</p>
-<p><b>Skin Concern:</b> ${concern}</p>
-<p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
+    <p><b>Skin Goal:</b> ${goal}</p>
+    <p><b>Skin Type:</b> ${type}</p>
+    <p><b>Age Range:</b> ${age}</p>
+    <p><b>Skin Concern:</b> ${concern}</p>
+    <p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
 
-<div style="background:#f6f4ef;padding:25px;border-radius:12px;margin-top:20px;">
-<p><b>Morning</b></p>
-<p>${morning}</p>
+    <div style="background:#f6f4ef;padding:25px;border-radius:12px;margin-top:20px;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+      <p style="font-weight:600;margin-bottom:5px;">Morning</p>
+      <p>${morning}</p>
 
-<p style="margin-top:15px;"><b>Evening</b></p>
-<p>${evening}</p>
+      <p style="font-weight:600;margin-top:15px;margin-bottom:5px;">Evening</p>
+      <p>${evening}</p>
 
-${notes ? `<p style="margin-top:15px;"><b>Note:</b> ${notes}</p>` : ""}
+      ${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
+    </div>
 
-</div>
-`;
+    <p style="margin-top:20px;font-size:14px;color:#666;">
+      Skincare is personal. This routine is a thoughtful starting point based on your selections.
+    </p>
+
+    <p style="margin-top:15px;">
+      <a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
+        Refine your routine with our personal shopping experience →
+      </a>
+    </p>
+  `;
 
   document.getElementById("routineResult").innerHTML = routine;
 }
-</script>>
-
+</script>
 <div id="routineResult" style="max-width:600px;margin:40px auto;text-align:center;"></div>
