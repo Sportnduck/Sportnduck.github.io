@@ -73,53 +73,101 @@ style="display:inline-block;color:#7A6A4F;text-decoration:none;font-weight:600;f
 </a>
 </div>
 <script>
-
 function showRoutine() {
+  let goal = document.getElementById("goal").value;
+  let type = document.getElementById("type").value;
+  let age = document.getElementById("age").value;
+  let concern = document.getElementById("concern").value;
 
-let goal = document.getElementById("goal").value;
-let type = document.getElementById("type").value;
-let age = document.getElementById("age").value;
-let concern = document.getElementById("concern").value;
+  let morning = "Gentle Cleanser • Vitamin C Serum • Moisturizer • Sunscreen";
+  let evening = "Cleanser • Treatment Serum • Moisturizer";
+  let ingredients = "";
+  let notes = "";
 
-let morning = "Gentle Cleanser • Vitamin C Serum • Moisturizer • Sunscreen";
-let evening = "Cleanser • Treatment Serum • Moisturizer";
-let ingredients = "";
-let notes = "";
+  if (goal === "Glow & Brightening") {
+    ingredients = "Vitamin C • Niacinamide • Gentle Exfoliation";
+  }
 
-if (goal === "Glow & Brightening") {
-ingredients = "Vitamin C • Niacinamide • Gentle exfoliation";
+  if (goal === "Hydration") {
+    ingredients = "Hyaluronic Acid • Ceramides • Barrier Support";
+  }
+
+  if (goal === "Acne Support") {
+    ingredients = "Niacinamide • Clarifying Support • Oil Balance";
+  }
+
+  if (goal === "Firmness") {
+    ingredients = "Peptides • Retinol • Collagen Support";
+  }
+
+  if (goal === "Calming & Repair") {
+    ingredients = "Ceramides • Niacinamide • Barrier Repair Ingredients";
+  }
+
+  if (concern === "Rosacea") {
+    morning = "Gentle Cleanser • Calming Serum • Moisturizer • Mineral Sunscreen";
+    evening = "Gentle Cleanser • Barrier-Support Serum • Moisturizer";
+    ingredients = "Niacinamide • Azelaic Acid • Ceramides";
+    notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
+  }
+
+  if (concern === "Melasma") {
+    morning = "Gentle Cleanser • Brightening Serum • Moisturizer • Broad-Spectrum Sunscreen";
+    evening = "Cleanser • Pigment-Support Treatment • Moisturizer";
+    ingredients = "Vitamin C • Tranexamic Acid • Niacinamide";
+    notes = "Consistency and daily sun protection are essential for melasma-prone skin.";
+  }
+
+  if (concern === "Sensitive Skin") {
+    morning = "Gentle Cleanser • Hydrating Serum • Moisturizer • Sunscreen";
+    evening = "Gentle Cleanser • Niacinamide or Ceramide Support • Moisturizer";
+    ingredients = "Ceramides • Niacinamide • Panthenol";
+    notes = "Choose fragrance-free, barrier-friendly formulas and introduce actives slowly.";
+  }
+
+  if (concern === "Acne-Prone") {
+    morning = "Gentle Cleanser • Niacinamide Serum • Lightweight Moisturizer • Sunscreen";
+    evening = "Cleanser • Clarifying Treatment • Moisturizer";
+    ingredients = "Niacinamide • Salicylic Support • Oil Balance";
+    notes = "Look for balancing ingredients and avoid overly harsh stripping routines.";
+  }
+
+  if (concern === "Hyperpigmentation") {
+    morning = "Gentle Cleanser • Vitamin C or Brightening Serum • Moisturizer • Sunscreen";
+    evening = "Cleanser • Tone-Evening Treatment • Moisturizer";
+    ingredients = "Vitamin C • Niacinamide • Brightening Support";
+    notes = "Brightening ingredients and sun protection help support a more even skin tone.";
+  }
+
+  if (concern === "Barrier Damage") {
+    morning = "Gentle Cleanser • Hydrating Serum • Ceramide-Rich Moisturizer • Sunscreen";
+    evening = "Gentle Cleanser • Barrier Repair Serum • Rich Moisturizer";
+    ingredients = "Ceramides • Hyaluronic Acid • Barrier Repair Support";
+    notes = "Pause aggressive exfoliation and focus on hydration and repair.";
+  }
+
+  let routine = `
+    <h2 style="color:#7A6A4F;">Your Suggested Routine</h2>
+
+    <p><b>Skin Goal:</b> ${goal}</p>
+    <p><b>Skin Type:</b> ${type}</p>
+    <p><b>Age Range:</b> ${age}</p>
+    <p><b>Skin Concern:</b> ${concern}</p>
+    <p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
+
+    <div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
+      <p><b>Morning</b></p>
+      <p>${morning}</p>
+
+      <p style="margin-top:15px;"><b>Evening</b></p>
+      <p>${evening}</p>
+
+      ${notes ? `<p style="margin-top:15px;"><b>Note:</b> ${notes}</p>` : ""}
+    </div>
+  `;
+
+  document.getElementById("routineResult").innerHTML = routine;
 }
-
-if (goal === "Hydration") {
-ingredients = "Hyaluronic Acid • Ceramides • Barrier support";
-}
-
-if (goal === "Firmness") {
-ingredients = "Peptides • Retinol • Collagen support";
-}
-
-if (concern === "Rosacea") {
-morning = "Gentle Cleanser • Calming serum • Moisturizer • Mineral Sunscreen";
-evening = "Gentle Cleanser • Barrier repair serum • Moisturizer";
-notes = "Focus on calming ingredients and protecting the skin barrier.";
-}
-
-if (concern === "Melasma") {
-morning = "Gentle Cleanser • Brightening serum • Moisturizer • Broad-spectrum Sunscreen";
-evening = "Cleanser • Pigment-support treatment • Moisturizer";
-notes = "Daily sun protection is essential for melasma management.";
-}
-
-if (concern === "Sensitive Skin") {
-morning = "Gentle Cleanser • Hydrating serum • Moisturizer • Sunscreen";
-evening = "Gentle Cleanser • Barrier-support serum • Moisturizer";
-notes = "Use fragrance-free and barrier-friendly ingredients.";
-}
-
-document.getElementById("routineResult").innerHTML = routine;
-
-}
-
-</script>
+</script>>
 
 <div id="routineResult" style="max-width:600px;margin:40px auto;text-align:center;"></div>
