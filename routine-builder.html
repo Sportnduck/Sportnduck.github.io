@@ -148,7 +148,24 @@ function showRoutine() {
     ingredients = "Ceramides • Hyaluronic Acid • Barrier Repair Support";
     notes = "Pause aggressive exfoliation and focus on hydration and repair.";
   }
+// LED Therapy Suggestions
+let led = "";
 
+if (concern === "Acne-Prone") {
+   led = "Blue LED Light – helps target acne-causing bacteria.";
+}
+
+if (concern === "Rosacea") {
+   led = "Yellow LED Light – helps calm redness and sensitive skin.";
+}
+
+if (concern === "Hyperpigmentation" || concern === "Melasma") {
+   led = "Green LED Light – helps support a more even skin tone.";
+}
+
+if (goal === "Firmness") {
+   led = "Red LED Light – supports collagen and skin firmness.";
+}
   let routine = `
 <div style="max-width:650px;margin:40px auto;background:#ffffff;padding:30px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
 
