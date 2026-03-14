@@ -151,24 +151,25 @@ function showRoutine() {
   }
 
   let routine = `
-    <h2 style="color:#7A6A4F;">Your Suggested Routine</h2>
+<h2 style="color:#7A6A4F;margin-top:40px;">Your Personalized Routine</h2>
 
-    <p><b>Skin Goal:</b> ${goal}</p>
-    <p><b>Skin Type:</b> ${type}</p>
-    <p><b>Age Range:</b> ${age}</p>
-    <p><b>Skin Concern:</b> ${concern}</p>
-    <p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
+<p><b>Skin Goal:</b> ${goal}</p>
+<p><b>Skin Type:</b> ${type}</p>
+<p><b>Age Range:</b> ${age}</p>
+<p><b>Skin Concern:</b> ${concern}</p>
+<p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
 
-    <div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
-      <p><b>Morning</b></p>
-      <p>${morning}</p>
+<div style="background:#f6f4ef;padding:25px;border-radius:12px;margin-top:20px;">
+<p><b>Morning</b></p>
+<p>${morning}</p>
 
-      <p style="margin-top:15px;"><b>Evening</b></p>
-      <p>${evening}</p>
+<p style="margin-top:15px;"><b>Evening</b></p>
+<p>${evening}</p>
 
-      ${notes ? `<p style="margin-top:15px;"><b>Note:</b> ${notes}</p>` : ""}
-    </div>
-  `;
+${notes ? `<p style="margin-top:15px;"><b>Note:</b> ${notes}</p>` : ""}
+
+</div>
+`;
 
   document.getElementById("routineResult").innerHTML = routine;
 }
