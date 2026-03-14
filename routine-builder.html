@@ -85,6 +85,7 @@ function showRoutine() {
 let led = "";
 let ledUse = "";
   let focus = "";
+  let ingredientTip = "";
 
   if (goal === "Glow & Brightening") {
     ingredients = "Vitamin C • Niacinamide • Gentle Exfoliation";
@@ -106,6 +107,7 @@ let ledUse = "";
     morning = "Gentle Cleanser • Calming Serum • Moisturizer • Mineral Sunscreen";
     evening = "Gentle Cleanser • Barrier-Support Serum • Moisturizer";
     ingredients = "Niacinamide • Azelaic Acid • Ceramides";
+    ingredientTip = "Niacinamide helps calm redness, Azelaic Acid supports clearer-looking skin, and Ceramides strengthen the skin barrier.";
     notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
 led = "Yellow LED light may help support redness and sensitive skin. 🟡";
     ledUse = "Use 3–4 times per week for short sessions, watching carefully for sensitivity.";
@@ -176,6 +178,7 @@ let routine = `
   </div>
 
   <p style="margin:0 0 14px 0;"><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
+  <p style="font-size:14px;color:#666;margin-top:6px;">${ingredientTip}</p>
 
   <div style="background:#faf8f4;padding:20px;border-radius:12px;margin-top:18px;">
   <p style="font-weight:600;margin:0 0 8px 0;">☀️ Morning Routine</p>
