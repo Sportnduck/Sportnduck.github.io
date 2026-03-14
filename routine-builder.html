@@ -74,6 +74,17 @@ style="display:inline-block;color:#7A6A4F;text-decoration:none;font-weight:600;f
 </div>
 
 <div id="routineResult" style="max-width:650px;margin:40px auto;text-align:center;"></div>
+</div>
+</div>
+
+<div id="routineResult" style="max-width:650px;margin:40px auto;text-align:center;"></div>
+
+<div style="text-align:center;margin:50px 0;">
+<a href="skin-science.html"
+style="display:inline-block;color:#7A6A4F;text-decoration:none;font-weight:600;font-size:16px;">
+← Back to Skin Science
+</a>
+</div>
 
 <script>
 function showRoutine() {
@@ -90,19 +101,15 @@ function showRoutine() {
   if (goal === "Glow & Brightening") {
     ingredients = "Vitamin C • Niacinamide • Gentle Exfoliation";
   }
-
   if (goal === "Hydration") {
     ingredients = "Hyaluronic Acid • Ceramides • Barrier Support";
   }
-
   if (goal === "Acne Support") {
     ingredients = "Niacinamide • Clarifying Support • Oil Balance";
   }
-
   if (goal === "Firmness") {
     ingredients = "Peptides • Retinol • Collagen Support";
   }
-
   if (goal === "Calming & Repair") {
     ingredients = "Ceramides • Niacinamide • Barrier Repair Ingredients";
   }
@@ -113,100 +120,69 @@ function showRoutine() {
     ingredients = "Niacinamide • Azelaic Acid • Ceramides";
     notes = "Focus on calming, barrier support, and avoiding over-exfoliation.";
   }
-
   if (concern === "Melasma") {
     morning = "Gentle Cleanser • Brightening Serum • Moisturizer • Broad-Spectrum Sunscreen";
     evening = "Cleanser • Pigment-Support Treatment • Moisturizer";
     ingredients = "Vitamin C • Tranexamic Acid • Niacinamide";
     notes = "Consistency and daily sun protection are essential for melasma-prone skin.";
   }
-
   if (concern === "Sensitive Skin") {
     morning = "Gentle Cleanser • Hydrating Serum • Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Niacinamide or Ceramide Support • Moisturizer";
     ingredients = "Ceramides • Niacinamide • Panthenol";
     notes = "Choose fragrance-free, barrier-friendly formulas and introduce actives slowly.";
   }
-
   if (concern === "Acne-Prone") {
     morning = "Gentle Cleanser • Niacinamide Serum • Lightweight Moisturizer • Sunscreen";
     evening = "Cleanser • Clarifying Treatment • Moisturizer";
     ingredients = "Niacinamide • Salicylic Support • Oil Balance";
     notes = "Look for balancing ingredients and avoid overly harsh stripping routines.";
   }
-
   if (concern === "Hyperpigmentation") {
     morning = "Gentle Cleanser • Vitamin C or Brightening Serum • Moisturizer • Sunscreen";
     evening = "Cleanser • Tone-Evening Treatment • Moisturizer";
     ingredients = "Vitamin C • Niacinamide • Brightening Support";
     notes = "Brightening ingredients and sun protection help support a more even skin tone.";
   }
-
   if (concern === "Barrier Damage") {
     morning = "Gentle Cleanser • Hydrating Serum • Ceramide-Rich Moisturizer • Sunscreen";
     evening = "Gentle Cleanser • Barrier Repair Serum • Rich Moisturizer";
     ingredients = "Ceramides • Hyaluronic Acid • Barrier Repair Support";
     notes = "Pause aggressive exfoliation and focus on hydration and repair.";
   }
-// LED Therapy Suggestions
-let led = "";
 
-if (concern === "Acne-Prone") {
-   led = "Blue LED Light – helps target acne-causing bacteria.";
-}
-
-if (concern === "Rosacea") {
-   led = "Yellow LED Light – helps calm redness and sensitive skin.";
-}
-
-if (concern === "Hyperpigmentation" || concern === "Melasma") {
-   led = "Green LED Light – helps support a more even skin tone.";
-}
-
-if (goal === "Firmness") {
-   led = "Red LED Light – supports collagen and skin firmness.";
-}
   let routine = `
-<div style="max-width:650px;margin:40px auto;background:#ffffff;padding:30px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+  <div style="max-width:650px;margin:40px auto;background:#ffffff;padding:30px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+    <h2 style="color:#7A6A4F;margin-bottom:20px;text-align:center;">Your Personalized Routine</h2>
 
-<h2 style="color:#7A6A4F;margin-bottom:20px;text-align:center;">
-Your Personalized Routine
-</h2>
+    <p><b>Skin Goal:</b> ${goal}</p>
+    <p><b>Skin Type:</b> ${type}</p>
+    <p><b>Age Range:</b> ${age}</p>
+    <p><b>Skin Concern:</b> ${concern}</p>
+    <p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
 
-<p><b>Skin Goal:</b> ${goal}</p>
-<p><b>Skin Type:</b> ${type}</p>
-<p><b>Age Range:</b> ${age}</p>
-<p><b>Skin Concern:</b> ${concern}</p>
+    <div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
+      <p style="font-weight:600;margin-bottom:5px;">Morning Routine</p>
+      <p>${morning}</p>
 
-<p style="margin-top:15px;">
-<b>Recommended Ingredient Focus:</b> ${ingredients}
-</p>
-<p><b>Recommended Ingredient Focus:</b> ${ingredients}</p>
-<p><b>Advanced Skincare Support:</b> ${advanced}</p>
+      <p style="font-weight:600;margin-top:15px;margin-bottom:5px;">Evening Routine</p>
+      <p>${evening}</p>
 
-<div style="background:#f6f4ef;padding:20px;border-radius:10px;margin-top:20px;">
-<p style="font-weight:600;margin-bottom:5px;">Morning Routine</p>
-<p>${morning}</p>
+      ${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
+    </div>
 
-<p style="font-weight:600;margin-top:15px;margin-bottom:5px;">Evening Routine</p>
-<p>${evening}</p>
+    <p style="margin-top:20px;font-size:14px;color:#666;text-align:center;">
+      Skincare is personal. This routine is a thoughtful starting point based on your selections.
+    </p>
 
-${notes ? `<p style="margin-top:15px;font-size:14px;"><b>Note:</b> ${notes}</p>` : ""}
-</div>
+    <p style="margin-top:15px;text-align:center;">
+      <a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
+        Refine your routine with our personal shopping experience →
+      </a>
+    </p>
+  </div>
+  `;
 
-<p style="margin-top:20px;font-size:14px;color:#666;text-align:center;">
-Skincare is personal. This routine is a thoughtful starting point based on your selections.
-</p>
-
-<p style="margin-top:15px;text-align:center;">
-<a href="contact.html" style="color:#7A6A4F;font-weight:600;text-decoration:none;">
-Refine your routine with our personal shopping experience →
-</a>
-</p>
-
-</div>
-`;
   document.getElementById("routineResult").innerHTML = routine;
 }
 </script>
-<div id="routineResult" style="max-width:600px;margin:40px auto;text-align:center;"></div>
